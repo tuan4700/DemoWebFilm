@@ -1,0 +1,222 @@
+/* Tablet and Mobile */
+@media (max-width: 1023px) {
+    /* ---------------------User Action-------------------- */
+    .heading__nav-bar__list,
+    .heading__user__sign-out {
+        display: none;
+    }
+    
+    .app {
+        overflow: hidden;
+    }
+
+    .watch-film__footer {
+        flex-wrap: wrap;
+    }
+
+    .user-action__overlay {
+        display: block;
+    }
+
+    .user-action__block {
+        display: flex;
+        animation: animationShowMenuUser ease-in 0.2s;
+    }
+
+    .heading__margin {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+
+    .heading__nav-bar,
+    .heading__logo {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .status--hidden {
+        display: none;
+    }
+
+    @keyframes animationShowMenuUser { 
+        from {
+            right: -246px;
+            opacity: 0;
+        } to {
+            right: 0;
+            opacity: 1;
+        }
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    /* ----------------Heading------------------- */
+    /* --Begin-- */
+    .heading__history__search {
+        display: none;
+    }
+
+    .watch-film__block-heading {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .heading__logo__img {
+        margin-top: 22px;
+        margin-left: 10px;
+        width: 140px;
+    }
+
+    .heading__logo__link {
+        font-size: 1.4rem;
+        letter-spacing: 2.2px;
+    }
+
+    .heading__nav-bar {
+        flex: 1;
+        align-self: center;
+    }
+
+    .heading__nav-bar__auth {
+        margin-top: 14px;
+    }
+
+    .heading__block-search {
+        width: 68%;
+    }
+
+    .heading__search {
+        margin-top: 0;
+        width: 100%;
+        align-self: center;
+    }
+
+    .heading__search-icon {
+        top: 6px;
+        left: 364px;
+    }
+
+    .heading__nav-bar__history {
+        border-radius: inherit;
+        top: 62px;
+        left: -196px;
+        width: 100vw;
+        border-top: transparent;
+    }
+
+    .heading__auth {
+        margin-right: 0;
+    }
+
+    .btn__no-boder {
+        padding-right: 6px;
+    }
+
+    /* --End-- */
+
+    /* ----------------Content----------------------- */
+    /* --Begin-- */
+    
+    
+    /* --End-- */
+
+
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    /* ----------------Heading------------------- */
+    /* --Begin-- */
+    .heading__logo__img {
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+    .heading__block-search {
+        width: 12%;
+    }
+
+    .heading__search {
+        display: none;
+    }
+
+    .heading__search-icon {
+        position: initial;
+        margin-top: 36px;
+    }
+
+    .heading__notifi {
+        width: 100vw;
+        top: calc(var(--bell-height) + 34px);
+        right: -126px;
+        border-radius: 0;
+    }
+
+    .heading__notifi::before {
+        display: none;
+    }
+
+    .heading__nav-bar__auth {
+        height: 100%;
+    }
+
+    .heading__auth {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .heading__bell {
+        margin-bottom: 14px;
+        padding-top: 15px;
+    }
+
+    .heading__user {
+        padding-top: 30px;
+    }
+
+    .heading__login::after {
+        top: 44%;
+        height: 90%
+    }
+
+    .search-mobile__check__click:checked ~ .heading__nav-bar__history {
+        display: block;
+        width: 100vw;
+        top: var(--heading-height);
+        left: -196px;
+        border-radius: initial;
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent transparent #c4c4c4 transparent;
+    }
+
+    .heading__history__search-icon {
+        position: absolute;
+        top: 4px;
+        right: 8px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+    }
+    /* --End-- */
+
+    /* ----------------Content------------------- */
+    /* --Begin-- */
+    .watch-film__episode__list {
+        padding-left: 12px;
+    }
+    /* --End-- */
+
+    .user-action__block {
+        width: 46%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .watch-film__block-content__info .watch-film__block-content__background,
+    .watch-film__more-film {
+        display: none;
+    }
+}

@@ -1,0 +1,13 @@
+.app {
+    width: 308px;
+    background-color: var(--white-color);
+    margin: 0 auto;
+}
+
+.handleUser-film__block-info {
+    padding-top: 44px;
+}
+
+.handleUser-film__eye-icon {
+    top: 204px;
+}
