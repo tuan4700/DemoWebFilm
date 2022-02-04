@@ -12,13 +12,13 @@
     },
     {
       "id": 2,
-      "nameEng": "The Walking Dead (season 4)",
-      "nameVi": "Xác Sống (Phần 4)",
-      "img": "https://1.bp.blogspot.com/-Y4jeA1HCX4c/YTjkJtAACkI/AAAAAAAAEPY/RaUXBGH4wecX6BAEdRhDTHpmpOTGlJR4ACLcBGAsYHQ/w283-h400/411qHb3jPjL._AC_SY445_.jpg",
-      "info": "lấy bối cảnh vài tháng sau cuộc tấn công vào nhà tù của viên Thống đốc (David Morrissey) cùng quân đội của ông. Mùa này tiếp tục câu chuyện về nhân vật chính Rick Grimes (Andrew Lincoln), người mà từ bỏ quyền lãnh đạo của mình để sống một cuộc sống yên tĩnh và yên bình hơn là bản chất lạnh lùng của anh ấy trong mùa trước. Phấn đấu để giữ được hòa bình, Rick và nhóm bạn đấu tranh để duy trì cuộc sống lý tưởng tại nhà tù tuy nhiên họ phải đối mặt với các vấn đề phát sinh mới, từ các mối đe dọa bên trong lẫn bên ngoài nhà tù, trong đó có cái chết vì bệnh cúm và sự trở lại đầy thù hận của viên Thống đốc.",
-      "year": 2014,
-      "love": 189,
-      "eps": 16
+      "nameEng": "Legend of Yun Xi (2018)",
+      "nameVi": "Vân Tịch Truyện",
+      "img": "https://2.bp.blogspot.com/-ZrW0bziWV5U/XGNi5k7KGBI/AAAAAAAAEAE/ILLxVYMVtgEyX33CdUrXtcDH-c7aU_R7gCLcBGAs/s1600/legend_of_yun_xi_3159.jpg",
+      "info": "Hàn Vân Tịch thân là một nữ thái y, từ nhỏ đã mất mẹ, trải qua vô vàn khó khăn, vẫn luôn giữ được thái độ lạc quan tịch cực. Vân Tịch có thiêm bẩm về y học, tinh thông kĩ thuật y học cổ truyền, thế nhưng luôn bị đố kỵ và ghen ghét. Do duyên số, Vân Tịch gả cho Vương Tần Long Phi Dạ, từ đó sa vào cuộc đấu tranh tàn khốc trong cung. Vân Tịch dựa vào y thuật cao siêu, đầu óc nhìn xa trông rộng và tấm lòng lương thiện, giúp cho các đại thần trong triều giải trừ độc, giúp Tần Vương diệt trừ nội gián, dập tắt bệnh dịch cho bách tính, chữa trị thành công căn bệnh kỳ quái của Thái tử. Vân Tịch không chỉ dùng tấm lòng lương y của mình yêu thương giúp đỡ người dân, hơn nữa còn giúp Tần Vương phá vỡ tất cả những âm mưu nội phản, dập tắt những hành động nổi loạn của huynh muội Sở thị. Trải qua một loạt những biến cố, y thuật của của Vân Tịch ngày càng tinh thông, hơn nữa còn giành được sự yêu thương ngưỡng mộ của Vua Tần. Hai người tử bỏ danh lợi, cùng nhau nghiên cứu y thuật, cuối cùng rời khỏi cung điện, về rừng ở ẩn, sống một cuộc sống hạnh phúc mặc sự đời.",
+      "year": 2018,
+      "love": 1842,
+      "eps": 50
     },
     {
       "id": 3,
@@ -39,6 +39,96 @@
       "year": 2021,
       "love": 708,
       "eps": 38
+    },
+    {
+      "id": 5,
+      "nameEng": "Three Lifetimes Peach Blossom (2017)",
+      "nameVi": "Tam Sinh Tam Thế: Thập Lý Đào Hoa",
+      "img": "https://i.pinimg.com/564x/35/bd/fc/35bdfc683dd9da4928805a709cbce9cc.jpg",
+      "info": "chuyển thể từ tiểu thuyết ăn khách, kỹ xảo vừa đủ đẹp mắt, mạch phim có sự cắt chuyển hợp lý, dàn trai xinh gái đẹp có ngoại hình “nhìn phát yêu ngay”… là những nguyên nhân giúp Tam sinh tam thế gây được ấn tượng với khán giả. Nhiều khán giả thậm chí còn cho rằng Tam sinh tam thế Thập lý đào hoa là dự án cổ trang Hoa ngữ hiếm hoi mà cứ ghép cặp diễn viên nào là y như rằng họ được yêu thích. Dù vai chính diện hay phản diện, cứ xuất hiện trên màn ảnh là các diễn viên đã tạo được dấu ấn riêng.",
+      "year": 2021,
+      "love": 708,
+      "eps": 58
+    },
+    {
+      "id": 6,
+      "nameEng": "The Romance Of The Condor Heroes (2014)",
+      "nameVi": "Tân Thần Điêu Đại Hiệp",
+      "img": "http://1.bp.blogspot.com/-UBAi89eMXa0/VIU-lD18evI/AAAAAAAACoA/_V4bVmglL1c/s1600/tvhay-tan-than-dieu-dai-hiep.jpg",
+      "info": "cuối thời Nam Tống, khi quân Mông Cổ đã lớn mạnh, tiêu diệt hầu hết châu Á, châu Âu, đang trực tiếp uy hiếp an nguy của Nam Tống. Câu chuyện xoay quanh tình yêu của hai nhân vật chính là Dương Quá và Tiểu Long Nữ giữa những cuộc chiến tang thương đẫm máu cả trên giang hồ lẫn chiến trường. Đại quân Mông Cổ sắp tấn công Trung nguyên, đám người Quách Tĩnh khó khăn kháng địch. Trong thời khắc quan trọng, Tiểu Long Nữ và Dương Quá vô tình rơi vào vòng phân tranh, đánh bại Kim Luân Pháp Sư. Nhưng con đường đi đến hạnh phúc phải trải qua biết bao gian nan khó khăn. Dương Quá và Tiểu Long Nữ nhiều lần ly biệt. Từ đại hội võ lâm, kháng địch ở Tương Dương, sự việc ở Tuyệt Tình Cốc, và 16 năm sinh ly tử biệt. Một Dương Quá si tình cuối cùng cũng tìm lại được Tiểu Long Nữ của mình dưới đáy Tuyệt Tình Cốc và cùng nhau trở về. Đúng lúc đó Mông Cổ đang tập hợp nhân mã tấn công Tương Dương, Dương Quá đánh bại Kim Luân Pháp Vương, đồng thời dùng đá đánh chết Hoàng đế Mông Cổ Mông Ca, bảo vệ thành công thành Tương Dương.",
+      "year": 2021,
+      "love": 708,
+      "eps": 54
+    },
+    {
+      "id": 7,
+      "nameEng": "Perfect World (2021)",
+      "nameVi": "Thế Giới Hoàn Mỹ",
+      "img": "https://1.bp.blogspot.com/-Klvabkf-1xc/YIq6XVRA4vI/AAAAAAAADoM/AZJETG12qaUjDM-C35o1zs0ULTCfB6hEgCLcBGAsYHQ/w286-h400/111576-59035.jpg",
+      "info": "chuyển thể từ tiểu thuyết ăn khách, kỹ xảo vừa đủ đẹp mắt, mạch phim có sự cắt chuyển hợp lý, dàn trai xinh gái đẹp có ngoại hình “nhìn phát yêu ngay”… là những nguyên nhân giúp Tam sinh tam thế gây được ấn tượng với khán giả. Nhiều khán giả thậm chí còn cho rằng Tam sinh tam thế Thập lý đào hoa là dự án cổ trang Hoa ngữ hiếm hoi mà cứ ghép cặp diễn viên nào là y như rằng họ được yêu thích. Dù vai chính diện hay phản diện, cứ xuất hiện trên màn ảnh là các diễn viên đã tạo được dấu ấn riêng.",
+      "year": 2021,
+      "love": 6306,
+      "eps": 41
+    },
+    {
+      "id": 8,
+      "nameEng": "The Fast and The Furious (2001)",
+      "nameVi": "Quá Nhanh Quá Nguy Hiểm Phần 1",
+      "img": "http://4.bp.blogspot.com/-OSd8UDJYkI4/VTz7pUUWAlI/AAAAAAAAHUU/VmTCVei-uBI/s1600/22352_large.jpg",
+      "info": "Brian là tay lang thang, đói meo và nóng lòng được nếm trải giới hạn của tốc độ. Anh tự hào về tài lái xe lả lướt của mình, thế nhưng với dân đua xe, anh chỉ là tay mơ. Với chiếc xe được lắp thêm bộ tăng tốc NOS, anh đi tìm Dominic – ông hoàng tốc độ ở Los Angeles để xin được tham dự làng đua. Sau màn đua bạt mạng và bị cảnh sát đuổi bắt, Brian đã quay lại cứu Dominic khỏi chiếc còng đang sắp sửa bập vào tay anh chàng. Kể từ đó Brian được Dominic nhận vào đội, và cũng từ đó mối tình giữa Brian với Mia em gái Dominic bắt đầu nảy nở. Thực chất, Brian là nhân viên mật của FBI được cử đi phá chuyên án Băng Cướp Tốc Độ đang gieo rắc kinh hoàng trên khắp các xa lộ. Thế nhưng giờ đây anh cảm thấy mình có một mối quan hệ khắng khít với Dominic, và tình cảm giữa anh với Mia không thể nào chia lìa được.",
+      "year": 2001,
+      "love": 68,
+      "eps": 1
+    },
+    {
+      "id": 9,
+      "nameEng": "The Fast and The Furious 6 (2013)",
+      "nameVi": "Quá Nhanh Quá Nguy Hiểm Phần 6",
+      "img": "http://1.bp.blogspot.com/-IX9x5ZgFTHA/UmCf7sxukdI/AAAAAAAANUk/7S-q6P8e07k/s1600/tvhay.org-qua-nhanh-qua-nguy-hiem.jpg",
+      "info": "kể về Đặc vụ Hobbs phải nhờ đến Dom và nhóm của anh giúp sức trong cuộc vây bắt 1 băng đảng do Owen Shaw cầm đầu. Đổi lại, Dom muốn một bản lý lịch “sạch sẽ” cho mọi người trong đội. Tiếp nối từ những thành công trước và phim quá nhanh quá nguy hiểm 6 đã được bấm máy quay và sẽ công chiếu vào giữa hè năm nay. Vẫn những cuộc đua gay cấn và nảy lửa sẽ không các fan thất vọng.",
+      "year": 2013,
+      "love": 255,
+      "eps": 1
+    },
+    {
+      "id": 10,
+      "nameEng": "Boruto: Naruto Next Generations (2017)",
+      "nameVi": "Boruto: Naruto Thế Hệ Tiếp Theo",
+      "img": "https://4.bp.blogspot.com/-8xyqnKckBWQ/WeBu7z2vCrI/AAAAAAAASLc/JzR0vRqVZT8YTWVzPOyLZxqH5auRfBBegCLcBGAs/s1600/naruto-the-he-tiep-theo-tvhay.org.jpg",
+      "info": "mấy năm sau khi chiến tranh Ninja lần thứ tư, bây giờ giám sát một thế hệ mới trong Ninja thế giới, Naruto Uzumaki đạt được giấc mơ của mình trở thành Hokage thứ bảy sau khi ông và Hinata Hyuga làm một gia đình với con cái của họ Boruto và Himawari. Boruto đã trở thành một phần của một nhóm ninja do bảo trợ của Naruto Konohamaru Sarutobi , mà còn bao gồm Uchiha Sasuke và Haruno Sakura ‘s con gái Sarada và Mitsuki. Cảm thấy rằng cha mình là đặt nhiệm vụ Hokage của mình hơn gia đình của mình, buồn vì anh đã lỡ sinh nhật của Himawari, Boruto gặp Sasuke khi cậu ấy đến làng để cảnh báo cho Naruto của một mối đe dọa sắp xảy ra. Boruto quản lý để thuyết phục Sasuke để dạy cho anh Rasengan của cha mình cho các kỳ thi Chunin sắp tới. Nhưng cần Boruto của sự chú ý của người cha khiến hắn để lừa bằng cách sử dụng nguyên mẫu Kote thiết bị Katasuke tạo ra, chỉ cho cha mình bị loại anh trong trận đấu với Shikadai Nara, Shikamaru và con trai của Temari. Cả hai có một cuộc tranh cãi trước khi Momoshiki và Kinshiki Ōtsutsuki, những con số Sasuke cảnh Naruto của, xuất hiện và bắt cóc các Hokage để họ có thể sử dụng Kurama để khôi phục Shinju chết từ kích thước mà họ đến từ đâu.",
+      "year": 2017,
+      "love": 18896,
+      "eps": 233
+    },
+    {
+      "id": 11,
+      "nameEng": "Soul Land (2018)",
+      "nameVi": "Đấu La Đại Lục",
+      "img": "https://1.bp.blogspot.com/-do17In76hNA/YX6KVQUUlrI/AAAAAAAAEc4/gFQB7Q0GkGYOcdVu7_SMrygsLC078tG6ACLcBGAsYHQ/s16000/dau-la-dai-luc.png",
+      "info": "là một trong những tác phẩm đặc sắc của Đường Gia Tam Thiếu. Tác phẩm thuộc thể loại Huyễn Hiệp, mang đến cho độc giả một cái nhìn, một cảm nhận mới về thế giới hiệp khách huyền ảo. Câu chuyện với nhân vật chính, con một thợ rèn, một thợ rèn trở thành tửu quỷ, vì thê tử đã mất, sẵn sàng lôi cuốn người đọc ngay từ những chương đầu tiên. Đấu La Thế Giới, một đại lục rộng lớn, cư dân đông đúc. Chức nghiệp cao quý nhất tại đây được gọi là Hồn Sư. Mỗi người sinh ra, đều có một vũ hồn bẩm sinh. Vũ hồn có thể là cái cày, cái cuốc, liêm đao… thuộc khối công cụ, một đóa hoa cúc, một cành mai… thuộc thực vật hệ, đến các vũ hồn cường đại như Tuyết Ảnh Ma Hùng, Tật Phong Ma Lang…. Để có thể trở thành hồn sư, ngoài vũ hồn cường đại, còn cần đến hồn lực để sử dụng vũ hồn đó, vũ hồn càng lớn, hồn lực càng cao, đại biểu cho thực lực mạnh mẽ tại Đấu la đại lục. Cứ 10 cấp hồn lực, vũ hồn có thể phụ gia thêm một cái hồn hoàn, có được từ việc liệp sát hồn thú, những quái thú mạnh mẽ, có tu vị hằng nghìn năm. Hành trình tu luyện, tìm hiểu bí ẩn cái chết của mẫu thân, bí mật tông sư của phụ thân, câu chuyện sẽ cho người đọc những trải nghiệm thú vị.",
+      "year": 2018,
+      "love": 82225,
+      "eps": 193
+    },
+    {
+      "id": 12,
+      "nameEng": "Love And Redemption (2020)",
+      "nameVi": "Lưu Ly Mỹ Nhân Sát",
+      "img": "https://1.bp.blogspot.com/-5CwNMQ6atAA/Xy1P1aCIybI/AAAAAAAAICw/jajRYCCKIqAmiOvRifcSlIH8PS-UunUFwCLcBGAsYHQ/s2000/1111122.jpg",
+      "info": "Đây là một trong những bộ phim cổ trang được mong chờ nhất năm 2020. Phim được cải biên từ bộ tiểu thuyết nổi danh của Thập Tứ Lang, xoay quanh thiếu nữ Chử Toàn Cơ trời sinh khiếm khuyết lục thức. Mối tình của nàng và đệ tử Ly Trạch cung là Vũ Tư Phượng bị đè nặng bởi những âm mưu từ kiếp trước, nhưng bọn họ vẫn kiên định nắm tay nhau , đối mặt với muôn trùng gian khó…",
+      "year": 2020,
+      "love": 10529,
+      "eps": 59
+    },
+    {
+      "id": 13,
+      "nameEng": "The Legends (2019)",
+      "nameVi": "Chiêu Diêu",
+      "img": "https://1.bp.blogspot.com/-F54ZN73s0w0/XKAlNFu5wCI/AAAAAAAAVF4/r7UvSreQIkQUCDandBn9YsW8d8mNhRj9wCLcBGAs/s640/g2N3of.jpg",
+      "info": "Nữ ma đầu Lộ Chiêu Diêu (Bạch Lộc) là môn chủ Vạn Lục Môn, hoành hành ngang ngược khiến tiên ma hai giới vừa nghe đã sợ mất mật. Lúc hạ sơn cứu được tiểu tử Mặc Thanh (Hứa Khải), không ngờ đến lúc cướp kiếm lại bị Mặc Thanh giành mất, bản thân Lộ Chiêu Diêu còn bị kiếm thế đánh trọng thương. Năm năm sau, Lộ Chiêu Diêu quay lại, phát hiện Mặc Thanh đã làm cho Vạn Lục Môn càng cường đại hơn nữa. Lộ Chiêu Diêu bèn che giấu thân phận, lợi dụng tình cảm của Mặc Thanh, để hắn thay mình đi làm nhiều chuyện nguy hiểm. Thế nhưng đối diện với tình cảm của hắn, nàng dần dần dao động mục đích ban đầu. Cuối cùng, Lộ Chiêu Diêu cùng Mặc Thanh hợp lực đánh bại Lạc Minh Hiên giả nhân giả nghĩa, vạch trần bộ mặt thật của hắn cho hậu thế. Sau trận đại chiến, hai người cũng đến bên nhau.",
+      "year": 2019,
+      "love": 1001,
+      "eps": 56
     }
   ]
 }
