@@ -1,0 +1,98 @@
+.account-film {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.account-film .account-film__form.account-film__form-register,
+.account-film.create .account-film__form.account-film__form-sign-in {
+    display: none;
+}
+
+.account-film .account-film__form.account-film__form-sign-in,
+.account-film.create .account-film__form.account-film__form-register {
+    display: block;
+}
+
+.account-film__form {
+    width: 360px;
+    max-height: 100vh;
+}
+
+.account-film__type {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    color: #9f9f9f;
+    margin: 0 0 26px;
+}
+
+.block-form {
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #D8DEE4;
+    background-color: #F6F8FA;
+    margin-top: 10px;
+}
+
+.group-form {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 22px;
+}
+
+.account-film__lable {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.account-film__input {
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #b3b3b3;
+    height: 28px;
+    padding-left: 6px;
+}
+
+.account-film__input:hover {
+    border-color: #2fd356;
+}
+
+.account-film__btn-submit {
+    --mrg-l-r: 22px;
+    margin: 4px var(--mrg-l-r) 12px;
+    width: calc(100% - var(--mrg-l-r) * 2);
+    height: 28px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #2DA44E;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.account-film__btn-submit:hover {
+    opacity: 0.8;
+}
+
+.account-film__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.account-film__create {
+    color: #26A7ED;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.account-film__create:hover {
+    opacity: 0.8;
+}
