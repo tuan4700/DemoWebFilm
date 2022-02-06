@@ -10,9 +10,29 @@
     display: none;
 }
 
-.account-film .account-film__form.account-film__form-sign-in,
-.account-film.create .account-film__form.account-film__form-register {
+.account-film.create .account-film__form.account-film__form-register,
+.account-film .account-film__form.account-film__form-sign-in {
     display: block;
+}
+
+@keyframes hiddenForm {
+    from {
+        opacity: 1;
+        display: block;
+    } to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes showForm {
+    from {
+        opacity: 0;
+        display: none;
+    } to {
+        opacity: 1;
+        display: block;
+    }
 }
 
 .account-film__form {
@@ -64,7 +84,7 @@
     --mrg-l-r: 22px;
     margin: 4px var(--mrg-l-r) 12px;
     width: calc(100% - var(--mrg-l-r) * 2);
-    height: 28px;
+    height: 32px;
     font-size: 1.2rem;
     font-weight: 600;
     background-color: #2DA44E;
