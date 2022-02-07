@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- thay đổi sign in sang register add "create" -->
-    <div class="account-film">
+    <div class="account-film create">
         <form action="" method="post" id="form-sign-in" class="account-film__form account-film__form-sign-in">
             <h3 class="account-film__type account-film__sign-in">Sign In</h3>
             <div class="block-form">
@@ -33,7 +33,7 @@
             <div class="block-form">
                 <div class="account-film__center">
                     <span class="account-film__text">New to account?</span>
-                    <span class="account-film__create">Create an account</span>
+                    <span class="account-film__tocreate">Create an account</span>
                 </div>
             </div>
         </form>
@@ -65,10 +65,26 @@
             <div class="block-form">
                 <div class="account-film__center">
                     <span class="account-film__text">Already have an account?</span>
-                    <span class="account-film__create">Sign in</span>
+                    <span class="account-film__tosign-in">Sign in</span>
                 </div>
             </div>
         </form>
     </div>
+    <script src="/assets/JS/account_film.js"></script>
+    <script src="/assets/JS/validator.js"></script>
+    <script>
+        Validator({
+            form: '#form-register',
+            errorMessage: '.account-film__message',
+            rules: [
+                Validator.isRequired('#username-register'),
+                Validator.isEmail('#email', 'Vui lòng nhập đúng email'),
+                Validator.minLength('#password-register', 6),
+                Validator.isConfirm('#confirm-password', function () {
+                    return document.querySelector('#password-register').value;
+                }, 'Nhập lại mật khẩu không đúng')
+            ]
+        });
+    </script>
 </body>
 </html>

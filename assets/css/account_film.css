@@ -62,6 +62,15 @@
     margin: 12px 22px;
 }
 
+.group-form.invalid .account-film__message {
+    color: #ff4343;
+}
+
+.group-form.invalid .account-film__input {
+    border-color: #ff4343;
+    background-color: #f7e8e8;
+}
+
 .account-film__lable {
     font-size: 1rem;
     font-weight: 500;
@@ -78,6 +87,12 @@
 
 .account-film__input:hover {
     border-color: #2fd356;
+}
+
+.account-film__message {
+    margin-top: 2px;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
 .account-film__btn-submit {
@@ -107,12 +122,14 @@
     font-weight: 500;
 }
 
-.account-film__create {
+.account-film__tocreate,
+.account-film__tosign-in {
     color: #26A7ED;
     margin-left: 4px;
     cursor: pointer;
 }
 
-.account-film__create:hover {
+.account-film__tocreate:hover,
+.account-film__tosign-in:hover {
     opacity: 0.8;
 }
