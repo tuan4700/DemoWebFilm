@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- thay đổi sign in sang register add "create" -->
-    <div class="account-film create">
+    <div class="account-film">
         <form action="" method="post" id="form-sign-in" class="account-film__form account-film__form-sign-in">
             <h3 class="account-film__type account-film__sign-in">Sign In</h3>
             <div class="block-form">
@@ -77,14 +77,26 @@
             form: '#form-register',
             errorMessage: '.account-film__message',
             rules: [
-                Validator.isRequired('#username-register'),
+                Validator.isRequired('#username-register', 'Vui lòng nhập tên'),
+                Validator.isRequired('#email', 'Vui lòng nhập email'),
                 Validator.isEmail('#email', 'Vui lòng nhập đúng email'),
+                Validator.isRequired('#password-register', 'Vui lòng nhập mật khẩu'),
                 Validator.minLength('#password-register', 6),
+                Validator.isRequired('#confirm-password', 'Vui lòng nhập lại mật khẩu'),
                 Validator.isConfirm('#confirm-password', function () {
                     return document.querySelector('#password-register').value;
                 }, 'Nhập lại mật khẩu không đúng')
             ]
         });
+
+        Validator({
+            form: '#form-sign-in',
+            errorMessage: '.account-film__message',
+            rules: [
+                Validator.isRequired('#username-sign-in', 'Vui lòng nhập username'),
+                Validator.isRequired('#password-sign-in', 'Vui lòng nhập password')
+            ]
+        })
     </script>
 </body>
 </html>
