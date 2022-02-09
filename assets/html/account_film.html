@@ -14,22 +14,26 @@
 </head>
 <body>
     <!-- thay đổi sign in sang register add "create" -->
-    <div class="account-film">
+    <div class="account-film create">
         <form action="" method="post" id="form-sign-in" class="account-film__form account-film__form-sign-in">
             <h3 class="account-film__type account-film__sign-in">Sign In</h3>
+
             <div class="block-form">
                 <div class="group-form">
                     <label for="username-sign-in" class="account-film__lable">Username</label>
                     <input type="text" name="username" id="username-sign-in" placeholder="Username" class="account-film__input">
                     <span class="account-film__message"></span>
                 </div>
+
                 <div class="group-form">
                     <label for="password-sign-in" class="account-film__lable">Password</label>
                     <input type="password" name="password" id="password-sign-in" placeholder="Password" class="account-film__input">
                     <span class="account-film__message"></span>
                 </div>
+
                 <button type="submit" class="account-film__btn-submit">Sign in</button>
             </div>
+
             <div class="block-form">
                 <div class="account-film__center">
                     <span class="account-film__text">New to account?</span>
@@ -39,29 +43,55 @@
         </form>
         <form action="" method="post" id="form-register" class="account-film__form account-film__form-register">
             <h3 class="account-film__type account-film__register">Register</h3>
+
             <div class="block-form">
                 <div class="group-form">
                     <label for="username-register" class="account-film__lable">Username</label>
                     <input type="text" name="username" id="username-register" placeholder="Username" class="account-film__input">
                     <span class="account-film__message"></span>
                 </div>
+
                 <div class="group-form">
                     <label for="email" class="account-film__lable">Email</label>
                     <input type="email" name="email" id="email" placeholder="Email" class="account-film__input">
                     <span class="account-film__message"></span>
                 </div>
+
                 <div class="group-form">
                     <label for="password-register" class="account-film__lable">Password</label>
                     <input type="password" name="password" id="password-register" placeholder="Password" class="account-film__input">
                     <span class="account-film__message"></span>
                 </div>
+
                 <div class="group-form">
                     <label for="confirm-password" class="account-film__lable">Confirm Password</label>
                     <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" class="account-film__input">
                     <span class="account-film__message"></span>
                 </div>
+
+                <div class="group-form gender">
+                    <label for="genders" class="account-film__lable">Gender</label>
+                    <div class="group-radio">
+                        <input type="radio" value="male" name="genders" id="male" class="account-film__input">
+                        <label for="male" class="account-film__lable lable-gender">Nam</label>
+                    </div>
+
+                    <div class="group-radio">
+                        <input type="radio" value="female" name="genders" id="female" class="account-film__input">
+                        <label for="female" class="account-film__lable lable-gender">Nữ</label>
+                    </div>
+
+                    <div class="group-radio">
+                        <input type="radio" value="orther" name="genders" id="orther" class="account-film__input">
+                        <label for="orther" class="account-film__lable lable-gender">Khác</label>
+                    </div>
+
+                    <span class="account-film__message"></span>
+                </div>
+
                 <button type="submit" class="account-film__btn-submit">Register</button>
             </div>
+
             <div class="block-form">
                 <div class="account-film__center">
                     <span class="account-film__text">Already have an account?</span>
@@ -75,6 +105,7 @@
     <script>
         Validator({
             form: '#form-register',
+            formGroup: '.group-form',
             errorMessage: '.account-film__message',
             rules: [
                 Validator.isRequired('#username-register', 'Vui lòng nhập tên'),
@@ -85,8 +116,12 @@
                 Validator.isRequired('#confirm-password', 'Vui lòng nhập lại mật khẩu'),
                 Validator.isConfirm('#confirm-password', function () {
                     return document.querySelector('#password-register').value;
-                }, 'Nhập lại mật khẩu không đúng')
-            ]
+                }, 'Nhập lại mật khẩu không đúng'),
+                Validator.isRequired('input[name="genders"]', 'Vui lòng chọn dữ liệu')
+            ],
+            onSubmit: function (data) {
+                console.log(data);
+            }
         });
 
         Validator({
