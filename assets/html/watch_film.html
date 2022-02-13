@@ -8,7 +8,7 @@
     <link rel="icon" href="https://free.vector6.com/wp-content/uploads/2020/07/KhoThietKe-0000000026.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="/assets/font/fontawesome-free-5.15.3-web/css/all.min.css">
+    <script src="https://kit.fontawesome.com/676a00af5a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="/grid.css">
     <link rel="stylesheet" href="/general.css">
@@ -391,15 +391,25 @@
                             </div>
                             <div class="content__product__foot content__film__foot"></div>
                             <div class="watch-film__handle-video"> <!-- add resize -->
-                                <div class="watch-film__video"> <!-- add resize -->
+                                <div class="watch-film__video playing"> <!-- add resize --> <!-- add playing -->
                                     <video src="https://video.fhph1-1.fna.fbcdn.net/v/t42.27313-2/10000000_1883438375169296_8954214850189106260_n.mp4?_nc_cat=103&vs=1eafd67b714345e0&_nc_vs=HBksFQAYJEdJQ1dtQUFRN1U0cl9yQUdBRlNjRFB6MndrTjhickZxQUFBRhUAAsgBABUAGCRHSmlaUFFfanh6YzlhNGtCQUpYZ0lYSHNkMjVDYnJGcUFBQUYVAgLIAQBLBogScHJvZ3Jlc3NpdmVfcmVjaXBlATENc3Vic2FtcGxlX2ZwcwAQdm1hZl9lbmFibGVfbnN1YgAgbWVhc3VyZV9vcmlnaW5hbF9yZXNvbHV0aW9uX3NzaW0AKGNvbXB1dGVfc3NpbV9vbmx5X2F0X29yaWdpbmFsX3Jlc29sdXRpb24AEWRpc2FibGVfcG9zdF9wdnFzABUAJQAcAAAm4KThtrCx2wEVAigCQzMYC3Z0c19wcmV2aWV3HBdAgIf52yLQ5RgyZGFzaF9nZW4zYmFzaWNfcGFzc3Rocm91Z2hhbGlnbmVkX2hxMl9mcmFnXzJfdmlkZW8SABgYdmlkZW9zLnZ0cy5jYWxsYmFjay5wcm9kOBJWSURFT19WSUVXX1JFUVVFU1QbCIgVb2VtX3RhcmdldF9lbmNvZGVfdGFnBm9lcF9oZBNvZW1fcmVxdWVzdF90aW1lX21zDTE2NDI2Nzk4ODUwMjIMb2VtX2NmZ19ydWxlB3VubXV0ZWQTb2VtX3JvaV9yZWFjaF9jb3VudAEwDG9lbV92aWRlb19pZA80ODI0MzQ0MTMwOTM1OTQSb2VtX3ZpZGVvX2Fzc2V0X2lkDzQ4MjQzNDQwOTc2MDI2MRVvZW1fdmlkZW9fcmVzb3VyY2VfaWQPNDgyNDM0NDA2NDI2OTI4HG9lbV9zb3VyY2VfdmlkZW9fZW5jb2RpbmdfaWQPMjExOTYxNjgxMDY1NDg0JQIcACXEARsHiAFzBDkxNDECY2QKMjAyMS0xMS0wOQNyY2IBMANhcHAQQnVzaW5lc3MgTWFuYWdlcgJjdBlDT05UQUlORURfUE9TVF9BVFRBQ0hNRU5UE29yaWdpbmFsX2R1cmF0aW9uX3MHNTI4Ljk5OAJ0cxVwcm9ncmVzc2l2ZV9lbmNvZGluZ3MA&ccb=1-5&_nc_sid=41a7d5&efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9oZCJ9&_nc_ohc=DCQIlQ-9pREAX-QX9AS&_nc_ht=video-lax3-2.xx&oh=00_AT_A4Jmn36TBCqTi22nlQleoRyHdg8RhSzy1zjaOXnrmmA&oe=61EB26DF&_nc_rid=1d7bba45dc564c0" 
                                     class="watch-film__view-video" autoplay></video>
-                                    <div class="watch-film__video__overlay playing"> <!-- add playing -->
-                                        <i class="watch-film__btn watch-film__video__icon-undo fas fa-undo-alt"></i>
-                                        <i class="watch-film__btn watch-film__video__icon-play fas fa-play"></i>
-                                        <i class="watch-film__btn watch-film__video__icon-pause fas fa-pause"></i>
-                                        <i class="watch-film__btn watch-film__video__icon-redo fas fa-redo-alt"></i>
+                                    <div class="watch-film__video__overlay">
+                                        <!-- <i class="watch-film__btn watch-film__video__icon-undo fas fa-undo-alt"></i> -->
+                                        <i class="watch-film__btn watch-film__video__play fas fa-play"></i>
+                                        <i class="watch-film__btn watch-film__video__pause fas fa-pause"></i>
+                                        <!-- <i class="watch-film__btn watch-film__video__icon-redo fas fa-redo-alt"></i> -->
+                                    </div>
+                                    <div class="watch-film__options">
                                         <input type="range" class="watch-film__progress" id="watch-film__progress" value="0" step="1" min="0" max="100">
+                                        <div class="watch-film__video__icon-play"></div>
+                                        <i class="watch-film__video__icon-pause fa-solid fa-pause"></i>
+                                        <i class="change-time watch-film__video__icon-undo fas fa-undo-alt">
+                                            <p class="change-time-number watch-film__video__time-undo">10</p>
+                                        </i>
+                                        <i class="change-time watch-film__video__icon-redo fas fa-redo-alt">
+                                            <p class="change-time-number watch-film__video__time-redo">10</p>
+                                        </i>
                                         <p class="watch-film__video__time">00:00 / 00:00</p>
                                     </div>
                                 </div>
@@ -816,8 +826,7 @@
                                             <a href="#" class="content__movie-more__main-info name-film__vi">Tân Thiên
                                                 Long Bát Bộ</a>
                                             <div class="content__movie-more__sub-info">
-                                                <span class="content__sub-info__vi name-film__eng">Demi Gods and Semi
-                                                    Devils 2021</span>
+                                                <span class="content__sub-info__vi name-film__eng">Demi Gods and Semi Devils 2021</span>
                                             </div>
                                         </div>
                                     </li>
