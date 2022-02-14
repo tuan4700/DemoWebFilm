@@ -2,12 +2,25 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 const dataFilmApi = 'http://localhost:3000/films';
+const dataOfferFilmApi = 'http://localhost:3000/offerFilms';
 const sortFilm = $$('.content__title-item');
+const nextOfferFilms = $('.content__viewport-right');
+const prevOfferFilms = $('.content__viewport-left');
+const listOfferFilms = $('.content__viewport__list-films');
 
 const app = {
+    widthOfferFilm: 0,
 
     getFilms: function(callback) {
         fetch(dataFilmApi)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(callback)
+    },
+
+    getOfferFilms: function(callback) {
+        fetch(dataOfferFilmApi)
             .then(function(response) {
                 return response.json();
             })
@@ -51,13 +64,73 @@ const app = {
         $('.row.s-gutters.content__product__list').innerHTML = htmlFilms.join('');
     },
 
+    renderOfferFilms: function(listFilms) {
+        const htmlFilms = listFilms.map(film => {
+            return `
+            <li class="col l-3 m-3 content__viewport">
+                <div class="content__viewport__banner">
+                    <img src="${film.img}"
+                        alt="${film.nameVi}" class="product__img content__viewport__img">
+                    <a href="http://127.0.0.1:5500/assets/html/content_film.html" class="content__viewport__overlay product__overlay">
+                        <i class="product__overlay__icon far fa-play-circle"></i>
+                    </a>
+                </div>
+                <div class="content__viewport__info">
+                    <div class="content__info__name-vi name-film__vi">${film.nameVi}</div>
+                    <div class="content__info__name-eng name-film__eng">${film.nameEng}</div>
+                </div>
+                <div class="status">
+                    <div class="status__episodes">${film.eps}/${film.eps}</div>
+                    <div class="status__language">${film.translate}</div>
+                </div>
+            </li>
+            `;
+        })
+        $('.content__viewport__list-films').innerHTML = htmlFilms.join('');
+    },
+
     handleEventFilm: function () {
+        var _this = this;
         // Sắp xếp phim theo từng loại
         // sortFilm.forEach(function (film, index) {
         //     film.onclick = function () {
         //         $('.content__title-item .content__title-item__category').classList.add('content__title-item__category-click');
         //     }
         // })
+
+        // Next offer-film
+        nextOfferFilms.onclick = function() {
+            _this.offerFilms(1);
+        }
+
+        // Prev offer-film
+        prevOfferFilms.onclick = function() {
+            _this.offerFilms(-1);
+        }
+        
+
+    },
+
+    // Thay đổi offer-films
+    offerFilms: function (changed) {
+        // -----chỉnh lại sao cho phù hợp nếu tăng số offer lên----
+        if (changed === 1) {
+            if (this.widthOfferFilm <= -528.66) {
+                this.widthOfferFilm = this.widthOfferFilm + 528.66;
+            } else {
+                this.widthOfferFilm = this.widthOfferFilm - 176.22;
+            }
+            listOfferFilms.style.transform = 'translateX(' + this.widthOfferFilm + 'px)';
+            console.log(this.widthOfferFilm);
+        } else if (changed === -1) {
+            if (this.widthOfferFilm >= 0) {
+                this.widthOfferFilm = this.widthOfferFilm - 528.66;
+            } else {
+                this.widthOfferFilm = this.widthOfferFilm + 176.22;
+            }
+            listOfferFilms.style.transform = 'translateX(' + this.widthOfferFilm + 'px)';
+            console.log(this.widthOfferFilm);
+        }
     },
 
     start: function() {
@@ -68,8 +141,15 @@ const app = {
             _this.renderFilms(dataListFilms);
         });
 
+        this.getOfferFilms(function(dataListFilms) {
+            // Hiển thị danh sách offer-film
+            _this.renderOfferFilms(dataListFilms);
+        });
+
         // Xử lý các sự kiện
         this.handleEventFilm();
+
+        
     }
 }
 

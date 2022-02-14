@@ -130,5 +130,63 @@
       "love": 1001,
       "eps": 56
     }
+  ],
+  "offerFilms": [
+    {
+      "id": 1,
+      "nameEng": "Fights Break Sphere 4",
+      "nameVi": "Đấu Phá Thương Khung Phần 4",
+      "img": "https://1.bp.blogspot.com/-EGImfeYc7DQ/YGFY6BXUAuI/AAAAAAAADgk/Ew1krlXy9a0KejCLuiAc5738-zp9bqDwACLcBGAsYHQ/w285-h400/0.png",
+      "eps": 24,
+      "translate": "Thuyết Minh"
+    },
+    {
+      "id": 2,
+      "nameEng": "Ancient Love Poetry",
+      "nameVi": "Thiên Cổ Quyết Trần",
+      "img": "https://1.bp.blogspot.com/-bKeeHL5I_mg/YM2NAz80E-I/AAAAAAAAK-M/_j-VwpVg1oonQPvRZoNYZwaoPWWzFk9QwCLcBGAsYHQ/s2000/199295333_1412058305830471_1952468801636470529_n.jpg",
+      "eps": 49,
+      "translate": "Lồng Tiếng"
+    },
+    {
+      "id": 3,
+      "nameEng": "Love Under The Full Moon",
+      "nameVi": "Hãy Yêu Nhau Dưới Trăng Tròn",
+      "img": "https://1.bp.blogspot.com/-AFzMAnL1GGg/YS7pFLYEUfI/AAAAAAAAACw/nR3v5lfE7JsSpnAu-Xrs3SiuJdDvpTszgCLcBGAsYHQ/s1600/4VpdZ-4f.jpg",
+      "eps": 24,
+      "translate": "Thuyết Minh"
+    },
+    {
+      "id": 4,
+      "nameEng": "Quanzhi Fashi 5th Season",
+      "nameVi": "Toàn Chức Pháp Sư 5",
+      "img": "https://1.bp.blogspot.com/-sufFR2hn4pc/YQy8SGhulMI/AAAAAAAAEHc/xNKlQl6b5MkM3Uwr5xiZSTTElkBAEYuIQCLcBGAsYHQ/w283-h400/ps5.jpg",
+      "eps": 12,
+      "translate": "Thuyết Minh"
+    },
+    {
+      "id": 5,
+      "nameEng": "Mirror: A Tale of Twin Cities (2022)",
+      "nameVi": "Kính Song Thành",
+      "img": "https://1.bp.blogspot.com/-5UAezrxrj-s/YeUIIO3TWOI/AAAAAAAAAxM/g58W3fzRy50bIA67y-2RQI3BHeHJzB_PACNcBGAsYHQ/s500/sfsfs.jpg",
+      "eps": 47,
+      "translate": "Thuyết Minh"
+    },
+    {
+      "id": 6,
+      "nameEng": "Swallowed Star (2020)",
+      "nameVi": "Thôn Phệ Tinh Không",
+      "img": "https://1.bp.blogspot.com/-AXVRv3y-wNY/X8m7xbz1h9I/AAAAAAAAAWg/IVosMD4JdpglFtnayZ2joncHG-lrFJajgCLcBGAsYHQ/w312-h438/thon-phe-tinh-khong.jpg",
+      "eps": 31,
+      "translate": "Thuyết Minh"
+    },
+    {
+      "id": 7,
+      "nameEng": "Hellbound (2021)",
+      "nameVi": "Bản Án Từ Địa Ngục",
+      "img": "https://1.bp.blogspot.com/-B3UsBtuNcA0/YZeklAGiTVI/AAAAAAAAAbk/JH8vuaiJXQce3Q_XWterTj5qWgqJkOJUQCLcBGAsYHQ/s1200/11e.jpg",
+      "eps": 6,
+      "translate": "Thuyết Minh"
+    }
   ]
 }
