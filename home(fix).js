@@ -132,12 +132,32 @@ const app = {
         }
     },
 
+    // Xử lý khi chuyển tiếp danh sách films
+    // changeFilms: function(films) {
+    //     var nextFilms = $('.content__title-item');
+    //     var listFilms = $('.content__product__list');
+    //     var heightChangeFilms = 0;
+    //     nextFilms.onclick = function() {
+    //         var numberFilms = Math.ceil(films.length / 20 - 1);
+    //         var height = numberFilms * 1415;
+    //         if (heightChangeFilms <= `-${height}`) {
+    //             heightChangeFilms = heightChangeFilms + height;
+    //         } else {
+    //             heightChangeFilms = heightChangeFilms - 1415;                
+    //         }
+    //         listFilms.style.transform = 'translateY(' + heightChangeFilms +'px)';
+    //         console.log(heightChangeFilms);
+    //     }
+    // },
+
     start: function() {
         _this = this;
         // Lấy data từ Api
         this.getFilms(function(dataListFilms) {
             // Hiển thị danh sách film
             _this.renderFilms(dataListFilms);
+            // Xử lý khi Next List Films
+            // _this.changeFilms(dataListFilms);
         });
 
         this.getOfferFilms(function(dataListFilms) {
