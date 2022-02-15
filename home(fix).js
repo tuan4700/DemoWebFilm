@@ -90,46 +90,45 @@ const app = {
     },
 
     handleEventFilm: function () {
-        var _this = this;
         // Sắp xếp phim theo từng loại
         // sortFilm.forEach(function (film, index) {
         //     film.onclick = function () {
         //         $('.content__title-item .content__title-item__category').classList.add('content__title-item__category-click');
         //     }
         // })
-
-        // Next offer-film
-        nextOfferFilms.onclick = function() {
-            _this.offerFilms(1);
-        }
-
-        // Prev offer-film
-        prevOfferFilms.onclick = function() {
-            _this.offerFilms(-1);
-        }
         
 
     },
 
     // Thay đổi offer-films
-    offerFilms: function (changed) {
-        // -----chỉnh lại sao cho phù hợp nếu tăng số offer lên----
+    offerFilms: function (changed, list) {
+        var widthHiddenOffer = (list.length - 4) * 176.22;
         if (changed === 1) {
-            if (this.widthOfferFilm <= -528.66) {
-                this.widthOfferFilm = this.widthOfferFilm + 528.66;
+            if (this.widthOfferFilm <= `-${widthHiddenOffer}`) {
+                this.widthOfferFilm = this.widthOfferFilm + widthHiddenOffer;
             } else {
                 this.widthOfferFilm = this.widthOfferFilm - 176.22;
             }
             listOfferFilms.style.transform = 'translateX(' + this.widthOfferFilm + 'px)';
-            console.log(this.widthOfferFilm);
         } else if (changed === -1) {
             if (this.widthOfferFilm >= 0) {
-                this.widthOfferFilm = this.widthOfferFilm - 528.66;
+                this.widthOfferFilm = this.widthOfferFilm - widthHiddenOffer;
             } else {
                 this.widthOfferFilm = this.widthOfferFilm + 176.22;
             }
             listOfferFilms.style.transform = 'translateX(' + this.widthOfferFilm + 'px)';
-            console.log(this.widthOfferFilm);
+        }
+    },
+
+    changeOfferFilms: function (films) {
+        // Next offer-film
+        nextOfferFilms.onclick = function() {
+            _this.offerFilms(1, films);
+        }
+
+        // Prev offer-film
+        prevOfferFilms.onclick = function() {
+            _this.offerFilms(-1, films);
         }
     },
 
@@ -144,6 +143,8 @@ const app = {
         this.getOfferFilms(function(dataListFilms) {
             // Hiển thị danh sách offer-film
             _this.renderOfferFilms(dataListFilms);
+            // Xử lý Next và Prev cho offer-film
+            _this.changeOfferFilms(dataListFilms);
         });
 
         // Xử lý các sự kiện
