@@ -1,3 +1,4 @@
+"use strict";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -6,7 +7,6 @@ const dataOfferFilmApi = 'http://localhost:3000/offerFilms';
 const sortFilm = $$('.content__title-item');
 const nextOfferFilms = $('.content__viewport-right');
 const prevOfferFilms = $('.content__viewport-left');
-const listOfferFilms = $('.content__viewport__list-films');
 
 const app = {
     widthOfferFilm: 0,
@@ -28,43 +28,49 @@ const app = {
     },
 
     renderFilms: function(listFilms) {
+        var i = 0;
         const htmlFilms = listFilms.map(film => {
-            return `
-            <li class="col l-3 m-3 c-12 content__product__item">
-                <div class="content__product__background">
-                    <img src="${film.img}" alt="${film.nameVi}"
-                        class="product__img content__product__img">
-                    <a href="#" class="content__product__item-overlay product__overlay">
-                        <i class="product__overlay__icon far fa-play-circle"></i>
-                    </a>
-                    <div class="status">
-                        <div class="status__episodes">${film.eps}/${film.eps}</div>
-                        <div class="status__language">Thuyết Minh</div>
-                    </div>
-                    <div class="content__product-block">
-                        <div class="content__product__info">
-                            <div class="content__product__info-vi name-film__vi s-product">${film.nameVi}</div>
-                            <div class="content__product__info-eng name-film__eng s-product">${film.nameEng}</div>
+            i++;
+            if (i <= 20) {
+                return `
+                <li class="col l-3 m-3 c-12 content__product__item">
+                    <div class="content__product__background">
+                        <img src="${film.img}" alt="${film.nameVi}"
+                            class="product__img content__product__img">
+                        <a href="#" class="content__product__item-overlay product__overlay">
+                            <i class="product__overlay__icon far fa-play-circle"></i>
+                        </a>
+                        <div class="status">
+                            <div class="status__episodes">${film.eps}/${film.eps}</div>
+                            <div class="status__language">Thuyết Minh</div>
                         </div>
-                        <div class="content__product__plot">
-                            <b>${film.nameVi}</b> ${film.info}
-                        </div>
-                        <div class="product__origin">
-                            <div class="product__origin__year">${film.year}</div>
-                            <div class="product__origin__like">
-                                <i class="product__origin__like-icon fas fa-heart"></i>
-                                <div class="product__origin__like-count">${film.love}</div>
+                        <div class="content__product-block">
+                            <div class="content__product__info">
+                                <div class="content__product__info-vi name-film__vi s-product">${film.nameVi}</div>
+                                <div class="content__product__info-eng name-film__eng s-product">${film.nameEng}</div>
+                            </div>
+                            <div class="content__product__plot">
+                                <b>${film.nameVi}</b> ${film.info}
+                            </div>
+                            <div class="product__origin">
+                                <div class="product__origin__year">${film.year}</div>
+                                <div class="product__origin__like">
+                                    <i class="product__origin__like-icon fas fa-heart"></i>
+                                    <div class="product__origin__like-count">${film.love}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </li>
-            `;
+                </li>
+                `;
+            }
+            return;
         })
         $('.row.s-gutters.content__product__list').innerHTML = htmlFilms.join('');
     },
 
     renderOfferFilms: function(listFilms) {
+        var i = 0;
         const htmlFilms = listFilms.map(film => {
             return `
             <li class="col l-3 m-3 content__viewport">
@@ -90,6 +96,10 @@ const app = {
     },
 
     handleEventFilm: function () {
+        var listOfferTime = $$('.content__movie-more__time');
+        var listOfferState = $$('.nom-com-movie__heading__text');
+        var _this = this;
+
         // Sắp xếp phim theo từng loại
         // sortFilm.forEach(function (film, index) {
         //     film.onclick = function () {
@@ -97,15 +107,32 @@ const app = {
         //     }
         // })
         
+        // Xử lý more-time offer-film
+        listOfferTime.forEach(function(offer) {
+            
+            offer.onclick = function (e) {
+                $('.content__movie-more__time.movie-more__time-click').classList.remove('movie-more__time-click');
+                e.target.classList.add('movie-more__time-click');
+            }
+        })
+
+        // Xử lý state offer-film
+        listOfferState.forEach(function(offer) {
+            offer.onclick = function (e) {
+                $('.nom-com-movie__heading__text.nom-com-movie__heading__text-click').classList.remove('nom-com-movie__heading__text-click');
+                e.target.classList.add('nom-com-movie__heading__text-click');
+            }
+        })
 
     },
 
     // Thay đổi offer-films
     offerFilms: function (changed, list) {
+        var listOfferFilms = $('.content__viewport__list-films');
         var widthHiddenOffer = (list.length - 4) * 176.22;
         if (changed === 1) {
             if (this.widthOfferFilm <= `-${widthHiddenOffer}`) {
-                this.widthOfferFilm = this.widthOfferFilm + widthHiddenOffer;
+                this.widthOfferFilm = 0;
             } else {
                 this.widthOfferFilm = this.widthOfferFilm - 176.22;
             }
@@ -114,13 +141,15 @@ const app = {
             if (this.widthOfferFilm >= 0) {
                 this.widthOfferFilm = this.widthOfferFilm - widthHiddenOffer;
             } else {
-                this.widthOfferFilm = this.widthOfferFilm + 176.22;
+                var prevOffer = Number.parseFloat(this.widthOfferFilm + 176.22).toFixed(2);
+                this.widthOfferFilm = Number(prevOffer);
             }
             listOfferFilms.style.transform = 'translateX(' + this.widthOfferFilm + 'px)';
         }
     },
 
     changeOfferFilms: function (films) {
+        var _this = this;
         // Next offer-film
         nextOfferFilms.onclick = function() {
             _this.offerFilms(1, films);
@@ -131,6 +160,7 @@ const app = {
             _this.offerFilms(-1, films);
         }
     },
+
 
     // Xử lý khi chuyển tiếp danh sách films
     // changeFilms: function(films) {
@@ -151,7 +181,7 @@ const app = {
     // },
 
     start: function() {
-        _this = this;
+        var _this = this;
         // Lấy data từ Api
         this.getFilms(function(dataListFilms) {
             // Hiển thị danh sách film
@@ -169,7 +199,6 @@ const app = {
 
         // Xử lý các sự kiện
         this.handleEventFilm();
-
         
     }
 }
