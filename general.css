@@ -1019,6 +1019,7 @@ html {
     background-color: var(--white-color);
     padding: 0 8px;
     background-image: linear-gradient(0, var(--background-color), transparent);
+    margin-bottom: 12px;
 }
 
 .content__product__wrap {
@@ -1039,6 +1040,10 @@ html {
 .content__product__background {
     background-color: var(--white-color);
     border: 1px solid #ececec;
+}
+
+.content__product__background:hover .product__overlay {
+    display: block;
 }
 
 .content__product__img {

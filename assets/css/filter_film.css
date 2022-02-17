@@ -108,6 +108,16 @@
 }
 
 /* Product */
+.content__product__block-img {
+    position: relative;
+}
+
+.content__product__item-overlay {
+    height: 200px;
+    width: 100%;
+    left: 0;
+}
+
 .content__product__list-pages {
     list-style: none;
     padding-left: 0;
@@ -135,6 +145,17 @@
     font-weight: 600;
     border-color: var(--black-color);
     cursor: default;
+}
+
+.content__product.nowrap-banner-films {
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.content__product.nowrap-banner-films .content__product__list {
+    transition: transform;
 }
 
 /* --End-- */
