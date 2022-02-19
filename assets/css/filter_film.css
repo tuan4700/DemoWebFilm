@@ -143,8 +143,9 @@
 .content__product__click-page {
     color: var(--black-color);
     font-weight: 600;
-    border-color: var(--black-color);
+    border-color: #5e5e5e;
     cursor: default;
+    background-color: #73c9ff;
 }
 
 .content__product.nowrap-banner-films {

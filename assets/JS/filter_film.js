@@ -1,10 +1,11 @@
-// "use strict";
+"use strict";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 const dataFilmApi = 'http://localhost:3000/films';
 
 const app = {
+
     getListFilms: function (callback) {
         fetch(dataFilmApi)
         .then(function (response) {
@@ -49,8 +50,70 @@ const app = {
                 </div>
             </li>
             `;
-        })
+        });
         listFilms.innerHTML = films.join('');
+    },
+
+    showListPage: function(data) {
+        var pages = Math.ceil(data.length / 20);
+        var listPage = [];
+        for (var i = 0; i < pages; i++) {
+            listPage[i] = i;
+        }
+        var showPage = listPage.map(function(page) {
+            if (page === 0) { 
+                return `
+                <li class="content__product__item-pages content__product__click-page">${page + 1}</li>
+                `;
+            }
+            return `
+            <li class="content__product__item-pages">${page + 1}</li>
+            `;
+        });
+        $('.content__product__list-pages').innerHTML = showPage.join('');
+    },
+
+    handleEventFilms: function () {
+        var _this = this;
+        var listOfferTime = $$('.content__movie-more__time');
+        var listOfferState = $$('.nom-com-movie__heading__text');
+        var listPage = $('.content__product__list-pages');
+        var listFilm = $('.content__product__list');
+
+        // Xử lý more-time offer-film
+        listOfferTime.forEach(function(offer) {
+            
+            offer.onclick = function (e) {
+                $('.content__movie-more__time.movie-more__time-click').classList.remove('movie-more__time-click');
+                e.target.classList.add('movie-more__time-click');
+            }
+        });
+
+        // Xử lý state offer-film
+        listOfferState.forEach(function(offer) {
+            offer.onclick = function (e) {
+                $('.nom-com-movie__heading__text.nom-com-movie__heading__text-click').classList.remove('nom-com-movie__heading__text-click');
+                e.target.classList.add('nom-com-movie__heading__text-click');
+            }
+        });
+
+    },
+
+    handleListPage: function () {
+        var pages = $$('.content__product__item-pages');
+        console.log(pages);
+        var listPage = $('.content__product__list');
+        Array.from(pages).forEach(function (page) {
+            page.onclick = function (e) {
+                var newPage = e.target.innerText;
+                if (newPage) {
+                    var rangePages = 0 - ((newPage - 1) * 1415);
+                    listPage.style.transform = 'translateY(' + rangePages + 'px)';
+                    $('.content__product__item-pages.content__product__click-page').classList.remove('content__product__click-page');
+                    e.target.classList.add('content__product__click-page');
+                }
+            }
+        });
     },
 
     start: function () {
@@ -58,7 +121,12 @@ const app = {
 
         this.getListFilms(function (dataFilms) {
             _this.renderListFilms(dataFilms);
+            _this.showListPage(dataFilms);
+            _this.handleListPage();
         })
+        
+
+        this.handleEventFilms();
     }
 }
 

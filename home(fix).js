@@ -98,7 +98,6 @@ const app = {
     handleEventFilm: function () {
         var listOfferTime = $$('.content__movie-more__time');
         var listOfferState = $$('.nom-com-movie__heading__text');
-        var _this = this;
 
         // Sắp xếp phim theo từng loại
         // sortFilm.forEach(function (film, index) {
