@@ -34,7 +34,11 @@
     }
 
     .content__product__img {
-        width: 136px;
+        width: 25%;
+    }
+
+    .content__product-block {
+        width: 75%;
     }
 
     .content__product__list {

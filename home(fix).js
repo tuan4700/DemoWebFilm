@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -11,7 +11,7 @@ const prevOfferFilms = $('.content__viewport-left');
 const app = {
     widthOfferFilm: 0,
 
-    getFilms: function(callback) {
+    getFilms: function (callback) {
         fetch(dataFilmApi)
             .then(function(response) {
                 return response.json();
@@ -19,7 +19,7 @@ const app = {
             .then(callback)
     },
 
-    getOfferFilms: function(callback) {
+    getOfferFilms: function (callback) {
         fetch(dataOfferFilmApi)
             .then(function(response) {
                 return response.json();
@@ -27,7 +27,7 @@ const app = {
             .then(callback)
     },
 
-    renderFilms: function(listFilms) {
+    renderFilms: function (listFilms) {
         var i = 0;
         const htmlFilms = listFilms.map(film => {
             i++;
@@ -46,8 +46,8 @@ const app = {
                         </div>
                         <div class="content__product-block">
                             <div class="content__product__info">
-                                <div class="content__product__info-vi name-film__vi s-product">${film.nameVi}</div>
-                                <div class="content__product__info-eng name-film__eng s-product">${film.nameEng}</div>
+                                <div title="${film.nameVi}" class="content__product__info-vi name-film__vi s-product">${film.nameVi}</div>
+                                <div title="${film.nameEng}" class="content__product__info-eng name-film__eng s-product">${film.nameEng}</div>
                             </div>
                             <div class="content__product__plot">
                                 <b>${film.nameVi}</b> ${film.info}
@@ -69,7 +69,7 @@ const app = {
         $('.row.s-gutters.content__product__list').innerHTML = htmlFilms.join('');
     },
 
-    renderOfferFilms: function(listFilms) {
+    renderOfferFilms: function (listFilms) {
         var i = 0;
         const htmlFilms = listFilms.map(film => {
             return `
@@ -82,8 +82,8 @@ const app = {
                     </a>
                 </div>
                 <div class="content__viewport__info">
-                    <div class="content__info__name-vi name-film__vi">${film.nameVi}</div>
-                    <div class="content__info__name-eng name-film__eng">${film.nameEng}</div>
+                    <div title="${film.nameVi}" class="content__info__name-vi name-film__vi">${film.nameVi}</div>
+                    <div title="${film.nameEng}" class="content__info__name-eng name-film__eng">${film.nameEng}</div>
                 </div>
                 <div class="status">
                     <div class="status__episodes">${film.eps}/${film.eps}</div>
@@ -160,26 +160,7 @@ const app = {
         }
     },
 
-
-    // Xử lý khi chuyển tiếp danh sách films
-    // changeFilms: function(films) {
-    //     var nextFilms = $('.content__title-item');
-    //     var listFilms = $('.content__product__list');
-    //     var heightChangeFilms = 0;
-    //     nextFilms.onclick = function() {
-    //         var numberFilms = Math.ceil(films.length / 20 - 1);
-    //         var height = numberFilms * 1415;
-    //         if (heightChangeFilms <= `-${height}`) {
-    //             heightChangeFilms = heightChangeFilms + height;
-    //         } else {
-    //             heightChangeFilms = heightChangeFilms - 1415;                
-    //         }
-    //         listFilms.style.transform = 'translateY(' + heightChangeFilms +'px)';
-    //         console.log(heightChangeFilms);
-    //     }
-    // },
-
-    start: function() {
+    start: function () {
         var _this = this;
         // Lấy data từ Api
         this.getFilms(function(dataListFilms) {

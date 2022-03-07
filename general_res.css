@@ -123,6 +123,10 @@
     .heading__user__sign-in {
         display: block;
     }
+
+    .content__product__wrap {
+        max-height: none;
+    }
 }
 
 /* Logo */

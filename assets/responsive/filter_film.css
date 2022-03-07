@@ -21,4 +21,8 @@
     .filter-film__tool {
         padding-bottom: 8px;
     }
+
+    .content__product__wrap {
+        max-height: 4240px;
+    }
 }

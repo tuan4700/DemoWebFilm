@@ -108,7 +108,7 @@
 }
 
 /* Product */
-.content__product__block-img {
+.content__product__background {
     position: relative;
 }
 
@@ -160,3 +160,8 @@
 }
 
 /* --End-- */
+
+.status {
+    top: 4px;
+    left: -6px;
+}

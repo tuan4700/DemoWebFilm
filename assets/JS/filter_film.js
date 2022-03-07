@@ -20,21 +20,19 @@ const app = {
             return `
             <li class="col l-3 m-3 c-12 content__product__item">
                 <div class="content__product__background">
-                    <div class="content__product__block-img">
-                        <img src="${film.img}" alt="${film.nameVi}"
-                            class="product__img content__product__img">
-                        <a href="#" class="content__product__item-overlay product__overlay">
-                            <i class="product__overlay__icon far fa-play-circle"></i>
-                        </a>
-                    </div>
+                    <img src="${film.img}" alt="${film.nameVi}"
+                        class="product__img content__product__img">
+                    <a href="#" class="content__product__item-overlay product__overlay">
+                        <i class="product__overlay__icon far fa-play-circle"></i>
+                    </a>
                     <div class="status">
                         <div class="status__episodes">${film.eps}/${film.eps}</div>
                         <div class="status__language">Thuyết Minh</div>
                     </div>
                     <div class="content__product-block">
                         <div class="content__product__info">
-                            <div class="content__product__info-vi name-film__vi s-product">${film.nameVi}</div>
-                            <div class="content__product__info-eng name-film__eng s-product">${film.nameEng}</div>
+                            <div title="${film.nameVi}" class="content__product__info-vi name-film__vi s-product">${film.nameVi}</div>
+                            <div title="${film.nameEng}" class="content__product__info-eng name-film__eng s-product">${film.nameEng}</div>
                         </div>
                         <div class="content__product__plot">
                             <b>${film.nameVi}</b> ${film.info}
@@ -74,11 +72,8 @@ const app = {
     },
 
     handleEventFilms: function () {
-        var _this = this;
         var listOfferTime = $$('.content__movie-more__time');
         var listOfferState = $$('.nom-com-movie__heading__text');
-        var listPage = $('.content__product__list-pages');
-        var listFilm = $('.content__product__list');
 
         // Xử lý more-time offer-film
         listOfferTime.forEach(function(offer) {
@@ -101,16 +96,23 @@ const app = {
 
     handleListPage: function () {
         var pages = $$('.content__product__item-pages');
-        console.log(pages);
         var listPage = $('.content__product__list');
         Array.from(pages).forEach(function (page) {
             page.onclick = function (e) {
                 var newPage = e.target.innerText;
                 if (newPage) {
-                    var rangePages = 0 - ((newPage - 1) * 1415);
-                    listPage.style.transform = 'translateY(' + rangePages + 'px)';
-                    $('.content__product__item-pages.content__product__click-page').classList.remove('content__product__click-page');
-                    e.target.classList.add('content__product__click-page');
+                    if (window.innerWidth >= 740) {
+                        var rangePages = 0 - ((newPage - 1) * 1415);
+                        listPage.style.transform = 'translateY(' + rangePages + 'px)';
+                        $('.content__product__item-pages.content__product__click-page').classList.remove('content__product__click-page');
+                        e.target.classList.add('content__product__click-page');
+                    } else {
+                        var rangePages = 0 - ((newPage - 1) * 4240);
+                        listPage.style.transform = 'translateY(' + rangePages + 'px)';
+                        $('.content__product__item-pages.content__product__click-page').classList.remove('content__product__click-page');
+                        e.target.classList.add('content__product__click-page');
+                    }
+
                 }
             }
         });
