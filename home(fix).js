@@ -1,4 +1,6 @@
 "use strict";
+import recommend from './assets/JS/recommend_film.js'
+
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -95,37 +97,13 @@ const app = {
         $('.content__viewport__list-films').innerHTML = htmlFilms.join('');
     },
 
-    handleEventFilm: function () {
-        var listOfferTime = $$('.content__movie-more__time');
-        var listOfferState = $$('.nom-com-movie__heading__text');
+    handleEvent: function () {
 
-        // Sắp xếp phim theo từng loại
-        // sortFilm.forEach(function (film, index) {
-        //     film.onclick = function () {
-        //         $('.content__title-item .content__title-item__category').classList.add('content__title-item__category-click');
-        //     }
-        // })
-        
-        // Xử lý more-time offer-film
-        listOfferTime.forEach(function(offer) {
-            
-            offer.onclick = function (e) {
-                $('.content__movie-more__time.movie-more__time-click').classList.remove('movie-more__time-click');
-                e.target.classList.add('movie-more__time-click');
-            }
-        })
-
-        // Xử lý state offer-film
-        listOfferState.forEach(function(offer) {
-            offer.onclick = function (e) {
-                $('.nom-com-movie__heading__text.nom-com-movie__heading__text-click').classList.remove('nom-com-movie__heading__text-click');
-                e.target.classList.add('nom-com-movie__heading__text-click');
-            }
-        })
-
+        // Xử lý more-time offer-film và state offer-film
+        recommend();
     },
 
-    // Thay đổi offer-films
+    // Thay đổi banner-films
     offerFilms: function (changed, list) {
         var listOfferFilms = $('.content__viewport__list-films');
         var widthHiddenOffer = (list.length - 4) * 176.22;
@@ -160,17 +138,25 @@ const app = {
         }
     },
 
+    searchFilms: function (listFilms) {
+        const search = $('.heading__search');
+        const btnSearch = $('.heading__search-icon');
+        search.oninput = function(e) {
+            console.log(e.target.value);
+        }
+    },
+
     start: function () {
         var _this = this;
         // Lấy data từ Api
-        this.getFilms(function(dataListFilms) {
+        this.getFilms((dataListFilms) => {
             // Hiển thị danh sách film
             _this.renderFilms(dataListFilms);
-            // Xử lý khi Next List Films
-            // _this.changeFilms(dataListFilms);
+            // Tìm kiếm films
+            _this.searchFilms(dataListFilms);
         });
 
-        this.getOfferFilms(function(dataListFilms) {
+        this.getOfferFilms((dataListFilms) => {
             // Hiển thị danh sách offer-film
             _this.renderOfferFilms(dataListFilms);
             // Xử lý Next và Prev cho offer-film
@@ -178,7 +164,7 @@ const app = {
         });
 
         // Xử lý các sự kiện
-        this.handleEventFilm();
+        this.handleEvent();
         
     }
 }

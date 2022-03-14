@@ -133,8 +133,9 @@
                                     </div>
                                 </div>
                                 <!-- show/hidden khi user đã đăng nhập hoặc chưa đăng nhập thì add class "status--hidden" -->
-                                <button class="btn__no-boder heading__login">Đăng nhập</button>
-                                <button class="btn__no-boder heading__register">Đăng ký</button>
+                                <button class="btn__no-boder heading__login">
+                                    <a href="http://127.0.0.1:5500/assets/html/account_film.html" class="heading__link-form">Đăng nhập</a>
+                                </button>
                                 <div class="heading__user status--hidden">
                                     <div class="heading__user__avartar hidden-mobile"></div>
                                     <p class="heading__user__name hidden-mobile">Anh Tuan</p>
@@ -463,24 +464,6 @@
                                                 <li class="watch-film__episode__item">15</li>
                                             </ul>
                                         </div>
-                                        <div class="watch-film__episode__block">
-                                            <span class="watch-film__episode__server">R.PRO:</span>
-                                            <ul class="watch-film__episode__list">
-                                                <li class="watch-film__episode__item">1</li>
-                                                <li class="watch-film__episode__item">2</li>
-                                                <li class="watch-film__episode__item">3</li>
-                                                <li class="watch-film__episode__item">4</li>
-                                            </ul>
-                                        </div>
-                                        <div class="watch-film__episode__block">
-                                            <span class="watch-film__episode__server">H.PRO:</span>
-                                            <ul class="watch-film__episode__list">
-                                                <li class="watch-film__episode__item">1</li>
-                                                <li class="watch-film__episode__item">2</li>
-                                                <li class="watch-film__episode__item">3</li>
-                                                <li class="watch-film__episode__item">4</li>
-                                            </ul>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -723,10 +706,6 @@
                                                 Lục</a>
                                             <div class="content__movie-more__sub-info">
                                                 <span class="content__sub-info__vi name-film__eng">Soul Land</span>
-                                                <!-- <div class="content__sub-info__view">
-                                                    <span class="content__sub-info__view-number">99948</span>
-                                                    <span class="content__sub-info__view-text">lượt</span>
-                                                </div> -->
                                             </div>
                                         </div>
                                     </li>
@@ -1208,7 +1187,6 @@
     </div>
 
     <!-- JS -->
-    <script src="/assets/JS/watch_film.js"></script>
-    <script src="/home.js"></script>
+    <script type="module" src="/assets/JS/watch_film.js"></script>
 </body>
 </html>

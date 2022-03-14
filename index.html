@@ -33,14 +33,14 @@
                     <div class="col l-10 m-9 c-3 heading__nav-bar">
                         <div class="heading__nav-bar__auth">
                             <div class="heading__block-search">
-                                <input type="text" placeholder="Gõ từ khóa, tên phim, đạo diễn, diễn viên cần tìm..."
+                                <input type="text" placeholder="Tìm kiếm phim..."
                                     class="heading__search">
                                 <label for="search-mobile-checkin" class="heading__search-check__mobile">
                                     <i class="heading__search-icon fas fa-search"></i>
                                 </label>
                                 <input type="checkbox" hidden id="search-mobile-checkin" class="heading__search-check__inp-mobile">
                                 <div class="heading__nav-bar__history">
-                                    <input type="text" placeholder="Từ khóa, tên phim, đạo diễn, diễn viên cần tìm..."
+                                    <input type="text" placeholder="Tìm kiếm phim..."
                                         class="heading__history__search">
                                     <ul class="heading__search-list">
                                         <li class="heading__search-item">
@@ -134,8 +134,12 @@
                                     </div>
                                 </div>
                                 <!-- show/hidden khi user đã đăng nhập hoặc chưa đăng nhập thì add class "status--hidden" -->
-                                <button class="btn__no-boder heading__login">Đăng nhập</button>
-                                <button class="btn__no-boder heading__register">Đăng ký</button>
+                                <button class="btn__no-boder heading__login">
+                                    <a href="http://127.0.0.1:5500/assets/html/account_film.html" class="heading__link-form">Đăng nhập</a>
+                                </button>
+                                <!-- <button class="btn__no-boder heading__register">
+                                    <a href="http://127.0.0.1:5500/assets/html/account_film.html" class="heading__link-form">Đăng Ký</a>
+                                </button> -->
                                 <div class="heading__user status--hidden">
                                     <div class="heading__user__avartar hidden-mobile"></div>
                                     <p class="heading__user__name hidden-mobile">Anh Tuan</p>
@@ -763,7 +767,7 @@
         <div class="app__overlay"></div>
     </div>
 
-    <script src="./home(fix).js"></script>
+    <script type="module" src="./home(fix).js"></script>
 </body>
 
 </html>

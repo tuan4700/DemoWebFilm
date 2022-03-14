@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 import recommend from "./recommend_film.js";
 
 const app = {

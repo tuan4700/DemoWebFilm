@@ -70,7 +70,7 @@ html {
     color: var(--text-color);
 }
 
-.btn__no-boder:hover {
+.btn__no-boder:hover .heading__link-form {
     color: var(--sub-general-color);
 }
 
@@ -349,10 +349,14 @@ html {
 
 .heading__search-icon {
     position: absolute;
-    top: 6px;
-    right: 10px;
+    top: 2px;
+    right: 8px;
     font-size: var(--icon-search-size);
     cursor: pointer;
+    width: 28px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
 }
 
 .heading__auth {
@@ -542,20 +546,25 @@ html {
 /* Heading_Login-Register */
 .heading__login {
     position: relative;
-    padding-left: 6px;
+    padding: 0;
+    margin: 0 0 6px 6px;
 }
 
-.heading__register {
+.heading__link-form {
+    color: var(--black-color);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 400;
 }
 
-.heading__login::after {
+/* .heading__login::after {
     content: "";
     position: absolute;
-    top: 14%;
+    top: 10%;
     right: -2%;
     height: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
-}
+} */
 
 .heading__user {
     display: flex;
@@ -915,21 +924,24 @@ html {
     font-weight: 500;
 }
 
-.nom-com-movie__heading__frames {
+.nom-com-movie__heading__frames,
+.content-film__content-heading__heading {
     position: relative;
     height: 28px;
     margin-left: 12px;
     cursor: pointer;
 }
 
-.nom-com-movie__heading__text {
+.nom-com-movie__heading__text,
+.content-film__content-heading__text {
     color: #7E7E7E;
     height: 28px;
     line-height: 28px;
     padding: 0 12px;
 }
 
-.nom-com-movie__heading__text.nom-com-movie__heading__text-click {
+.nom-com-movie__heading__text.nom-com-movie__heading__text-click,
+.content-film__content-heading__text.nom-com-movie__heading__text-click {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     border: 1px solid var(--sub-general-color);
