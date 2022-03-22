@@ -97,7 +97,7 @@ html {
     font-weight: 600;
     height: 23px;
     line-height: 28px;
-    cursor: pointer;
+    cursor: initial;
     overflow: hidden;
 }
 
@@ -647,6 +647,7 @@ html {
     display: block;
     width: auto;
     position: relative;
+    cursor: pointer;
 }
 
 .heading__nav-bar__item:nth-child(2):hover .heading__nav-bar__category {
@@ -1555,4 +1556,8 @@ html {
 
 .status--hidden {
     display: none;
+}
+
+.no-cusor {
+    cursor: initial;
 }

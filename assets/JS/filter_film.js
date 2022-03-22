@@ -1,30 +1,21 @@
 "use strict";
-import recommend from "./recommend_film.js"
+import recommend from "./recommend_film.js";
+import { dataListFilms } from "../JS/data.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-const dataFilmApi = 'http://localhost:3000/films';
-
 const app = {
 
-    getListFilms: function (callback) {
-        fetch(dataFilmApi)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(callback)
-    },
-
-    renderListFilms: function (data) {
-        var listFilms = $('.row.s-gutters.content__product__list');
-        var films = data.map(function (film) {
+    renderListFilms: function (listFilms) {
+        var elementListFilms = $('.row.s-gutters.content__product__list');
+        var films = listFilms.map(film => {
             return `
             <li class="col l-3 m-3 c-12 content__product__item">
                 <div class="content__product__background">
                     <img src="${film.img}" alt="${film.nameVi}"
                         class="product__img content__product__img">
-                    <a href="#" class="content__product__item-overlay product__overlay">
+                    <a href="./content_film.html?q=list-${film.id}" class="content__product__item-overlay product__overlay">
                         <i class="product__overlay__icon far fa-play-circle"></i>
                     </a>
                     <div class="status">
@@ -51,11 +42,11 @@ const app = {
             </li>
             `;
         });
-        listFilms.innerHTML = films.join('');
+        elementListFilms.innerHTML = films.join('');
     },
 
-    showListPage: function(data) {
-        var pages = Math.ceil(data.length / 20);
+    showListPage: function(listFilms) {
+        var pages = Math.ceil(listFilms.length / 20);
         var listPage = [];
         for (var i = 0; i < pages; i++) {
             listPage[i] = i;
@@ -107,12 +98,11 @@ const app = {
     start: function () {
         var _this = this;
 
-        this.getListFilms(function (dataFilms) {
-            _this.renderListFilms(dataFilms);
-            _this.showListPage(dataFilms);
+        dataListFilms(films => {
+            _this.renderListFilms(films);
+            _this.showListPage(films);
             _this.handleListPage();
         })
-        
 
         this.handleEventFilms();
     }
