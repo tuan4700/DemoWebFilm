@@ -26,8 +26,8 @@ const app = {
                             <i class="product__overlay__icon far fa-play-circle"></i>
                         </a>
                         <div class="status">
-                            <div class="status__episodes">${film.eps}/${film.eps}</div>
-                            <div class="status__language">Thuyết Minh</div>
+                            <div class="status__episodes">${film.listEpisode.length}/${film.episode}</div>
+                            <div class="status__language">${film.translate}</div>
                         </div>
                         <div class="content__product-block">
                             <div class="content__product__info">
@@ -71,7 +71,7 @@ const app = {
                     <div title="${film.nameEng}" class="content__info__name-eng name-film__eng">${film.nameEng}</div>
                 </div>
                 <div class="status">
-                    <div class="status__episodes">${film.eps}/${film.eps}</div>
+                    <div class="status__episodes">${film.listEpisode.length}/${film.episode}</div>
                     <div class="status__language">${film.translate}</div>
                 </div>
             </li>

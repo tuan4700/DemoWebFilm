@@ -30,12 +30,12 @@ const app = {
                                         <div class="content-film__info__status-nation">
                                             <div class="content-film__info__status">
                                                 Status:
-                                                <div class="content-film__info__episodes">${film.eps}/${film.eps}</div>
+                                                <div class="content-film__info__episodes">${film.listEpisode.length}/${film.episode}</div>
                                                 <div class="content-film__info__language">${film.translate}</div>
                                             </div>
                                             <div class="content-film__info__nation">
                                                 Quốc gia:
-                                                <div class="content-film__info__nation-name">Phim Trung Quốc</div>
+                                                <div class="content-film__info__nation-name">Phim ${film.national}</div>
                                             </div>
                                         </div>
                                         <div class="content-film__info__actor-director">
@@ -51,15 +51,15 @@ const app = {
                                         <div class="content-film__info__genre-time">
                                             <div class="content-film__info__genre">
                                                 Thể loại:
-                                                <div class="content-film__info__genre-name">Phim Cổ Trang, Phim Hoạt Hình</div>
+                                                <div class="content-film__info__genre-name">${film.categorys.map(category => " " + category)}</div>
                                             </div>
                                             <div class="content-film__info__time">
                                                 Thời lượng:
-                                                <div class="content-film__info__time-number">${film.eps} tập</div>
+                                                <div class="content-film__info__time-number">${film.episode} tập</div>
                                             </div>
                                         </div>
                                         <div class="content-film__info__watch-like-rating">
-                                            <a href="http://127.0.0.1:5500/assets/html/watch_film.html" class="content-film__info__watch">
+                                            <a href="/assets/html/watch_film.html?q=list-${film.id}" class="content-film__info__watch">
                                                 XEM PHIM
                                                 <div class="content-film__info__block-play">
                                                     <i class="content-film__info__watch-play fas fa-play"></i>
@@ -125,12 +125,12 @@ const app = {
                                         <div class="content-film__info__status-nation">
                                             <div class="content-film__info__status">
                                                 Status:
-                                                <div class="content-film__info__episodes">${film.eps}/${film.eps}</div>
+                                                <div class="content-film__info__episodes">${film.listEpisode.length}/${film.episode}</div>
                                                 <div class="content-film__info__language">${film.translate}</div>
                                             </div>
                                             <div class="content-film__info__nation">
                                                 Quốc gia:
-                                                <div class="content-film__info__nation-name">Phim Trung Quốc</div>
+                                                <div class="content-film__info__nation-name">Phim ${film.national}</div>
                                             </div>
                                         </div>
                                         <div class="content-film__info__actor-director">
@@ -146,15 +146,15 @@ const app = {
                                         <div class="content-film__info__genre-time">
                                             <div class="content-film__info__genre">
                                                 Thể loại:
-                                                <div class="content-film__info__genre-name">Phim Cổ Trang, Phim Hoạt Hình</div>
+                                                <div class="content-film__info__genre-name">${film.categorys.map(category => " " + category)}</div>
                                             </div>
                                             <div class="content-film__info__time">
                                                 Thời lượng:
-                                                <div class="content-film__info__time-number">${film.eps} tập</div>
+                                                <div class="content-film__info__time-number">${film.episode} tập</div>
                                             </div>
                                         </div>
                                         <div class="content-film__info__watch-like-rating">
-                                            <a href="http://127.0.0.1:5500/assets/html/watch_film.html" class="content-film__info__watch">
+                                            <a href="/assets/html/watch_film.html?q=offer-${film.id}" class="content-film__info__watch">
                                                 XEM PHIM
                                                 <div class="content-film__info__block-play">
                                                     <i class="content-film__info__watch-play fas fa-play"></i>
@@ -214,10 +214,6 @@ const app = {
     start: function () {
         var _this = this;
         this.handleEventFilm();
-        console.log(window.location.href);
-        // dataListFilms(films => {
-        //     _this.renderContentFilm(films);
-        // })
         this.renderContentFilm();
     }
 }

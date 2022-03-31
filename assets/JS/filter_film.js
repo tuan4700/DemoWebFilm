@@ -19,7 +19,7 @@ const app = {
                         <i class="product__overlay__icon far fa-play-circle"></i>
                     </a>
                     <div class="status">
-                        <div class="status__episodes">${film.eps}/${film.eps}</div>
+                        <div class="status__episodes">${film.listEpisode.length}/${film.episode}</div>
                         <div class="status__language">Thuyết Minh</div>
                     </div>
                     <div class="content__product-block">
