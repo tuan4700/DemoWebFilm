@@ -342,7 +342,7 @@
     font-weight: 600;
     padding-left: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .watch-film__episode__server {
@@ -353,7 +353,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    width: 446px;
+    margin-left: 118px;
     padding-left: 0;
 }
 
