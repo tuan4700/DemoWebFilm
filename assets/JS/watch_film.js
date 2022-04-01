@@ -6,43 +6,45 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 const filmId = window.location.href.slice(52).split('-');
+const zoomVideoBlock = $('.watch-film__block');
+const zoomVideoMoreFilm = $('.watch-film__more-film');
+const btnZoomVideo = $('.watch-film__zoom');
 
 const app = {
+    isZoom: false,
 
     handleEventFilm: function () {
         recommend();
+
+        btnZoomVideo.onclick = () => {
+            if(this.isZoom) {
+                $('.watch-film__block.zoom').classList.remove("zoom");
+                $('.watch-film__more-film.zoom').classList.remove("zoom");
+                btnZoomVideo.textContent = "Phóng to";
+            } else {
+                $('.watch-film__block').classList.add("zoom");
+                $('.watch-film__more-film').classList.add("zoom");
+                btnZoomVideo.textContent = "Thu nhỏ";
+            }
+            this.isZoom = !this.isZoom;
+        };
+
     },
 
-    renderVideo: function (numberEpisode) {
+    showVideo: function (films, numberEpisode) {
         var video = $('.watch-film__handle-video__film');
-        var episodeNameFilm = $('.watch-film__episode__name-film');
-        
-        if(filmId[0] === 'list' || filmId[0] === 'offer') {
-            if(filmId[0] === 'list') {
-                dataListFilms(films => {
-                    films.map(film => {
-                        if(film.id === Number(filmId[1])) {
-                            video.src = 'https://www.youtube.com/embed/' + film.listEpisode[numberEpisode] + '?modestbranding=1';
-                            episodeNameFilm.textContent = film.nameVi;
-                        }
-                    })
-                })
-            } else {
-                dataListOfferFlims(films => {
-                    films.map(film => {
-                        if(film.id === Number(filmId[1])) {
-                            video.src = 'https://www.youtube.com/embed/' + film.listEpisode[numberEpisode] + '?modestbranding=1';
-                            episodeNameFilm.textContent = film.nameVi;
-                        }
-                    })
-                })
+
+        films.map(film => {
+            if(film.id === Number(filmId[1])) {
+                video.src = 'https://www.youtube.com/embed/' + film.listEpisode[numberEpisode] + '?modestbranding=1';
             }
-        }
-        return;
+            return;
+        })
     },
 
     renderEpisode: function () {
-        const episodes = $('.watch-film__episode__list');
+        var episodes = $('.watch-film__episode__list');
+        var episodeNameFilm = $('.watch-film__episode__name-film');
 
         if(filmId[0] === 'list' || filmId[0] === 'offer') {
             if(filmId[0] === 'list') {
@@ -59,6 +61,7 @@ const app = {
                                 <li class="watch-film__episode__item">${index + 1}</li>
                                 `;
                             }).join('');
+                            episodeNameFilm.textContent = film.nameVi;
                         }
                         return;
                     })
@@ -77,6 +80,7 @@ const app = {
                                 <li class="watch-film__episode__item">${index + 1}</li>
                                 `
                             }).join('');
+                            episodeNameFilm.textContent = film.nameVi;
                         }
                         return;
                     })
@@ -86,17 +90,33 @@ const app = {
         return;
     },
 
-    test: function () {
+    changeVideo: function () {
+        const _this = this;
+
         if(filmId[0] === 'list' || filmId[0] === 'offer') {
             if(filmId[0] === 'list') {
                 dataListFilms(films => {
-                    let testEpisode = $$('.watch-film__episode__item');
-                    console.log(testEpisode);
+                    var episodes = $$('.watch-film__episode__item');
+                    Array.from(episodes).map(episode => {
+                        _this.showVideo(films, 0);
+                        episode.onclick = (e) => {
+                            $('.watch-film__episode__item.watch-film__episode__click').classList.remove("watch-film__episode__click");
+                            e.target.classList.add("watch-film__episode__click");
+                            _this.showVideo(films, e.target.textContent - 1);
+                        }
+                    })
                 })
             } else {
                 dataListOfferFlims(films => {
-                    let testEpisode = $$('.watch-film__episode__item');
-                    console.log(testEpisode);
+                    var episodes = $$('.watch-film__episode__item');
+                    Array.from(episodes).map(episode => {
+                        _this.showVideo(films, 0);
+                        episode.onclick = (e) => {
+                            $('.watch-film__episode__item.watch-film__episode__click').classList.remove("watch-film__episode__click");
+                            e.target.classList.add("watch-film__episode__click");
+                            _this.showVideo(films, e.target.textContent - 1);
+                        }
+                    })
                 })
             }
         }
@@ -106,8 +126,7 @@ const app = {
     start: function () {
         this.handleEventFilm();
         this.renderEpisode();
-        this.renderVideo(0);
-        this.test();
+        this.changeVideo();
     }
 }
 

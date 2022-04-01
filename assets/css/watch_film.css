@@ -1,35 +1,43 @@
 /* ---------Content------------------ */
 /* --Begin-- */
 /* add class "extend-film */
-.l-8-5.extend-film {
+.watch-film__block {
+    min-height: 900px;
+}
+
+.watch-film__block.zoom {
     flex: 0 0 100%;
     max-width: 100%;
 }
 
-.filter-film__path-category.extend-film {
-    padding-right: 6px;
+.watch-film__more-film.zoom {
+    display: none;
 }
+
+/* .filter-film__path-category.extend-film {
+    padding-right: 6px;
+} */
 
 .block-content {
     margin-top: var(--height-handle-video);
 }
 
-.block-content.extend-film.resize {
+/* .block-content.extend-film.resize {
     margin-top: calc(var(--height-handle-video) + 46px);
-}
+} */
 
-.l-8-5.extend-film .col.l-12.extend-film {
+/* .l-8-5.extend-film .col.l-12.extend-film {
     flex: 0 0 70.83333;
     max-width: 70.83333;
-}
+} */
 
-.l-8-5.extend-film .l-3-5.hidden_block.extend-film {
+/* .l-8-5.extend-film .l-3-5.hidden_block.extend-film {
     display: block;
-}
+} */
 
-.content-film .l-3-5.extend-film {
+/* .content-film .l-3-5.extend-film {
     display: none;
-}
+} */
 
 /* Heading Category */
 .watch-film__handle-video {
@@ -40,8 +48,16 @@
     border: 1px solid #CFD1D1;
 }
 
-.watch-film__handle-video.resize {
-    height: calc(var(--height-handle-video) + 46px);
+.watch-film__block.zoom .watch-film__handle-video {
+    height: calc(var(--height-handle-video) + 72px);
+}
+
+.watch-film__block.zoom .watch-film__handle-video__film {
+    height: 476px;
+}
+
+.watch-film__block.zoom .block-content {
+    margin-top: calc(var(--height-handle-video) + 72px);
 }
 
 .watch-film__video {
@@ -56,9 +72,9 @@
     height: 100%;
 }
 
-.watch-film__video.resize {
+/* .watch-film__video.resize {
     height: 450px;
-}
+} */
 
 .watch-film__video__overlay {
     width: 100%;
@@ -229,12 +245,12 @@
     align-items: center;
     justify-content: end;
     height: 26px;
-    margin-top: 16px;
+    margin-top: 10px;
     text-align: center;
 }
 
 .watch-film__btn-video__handle {
-    margin-left: 14px;
+    margin-left: 10px;
     background-color: #929292;
     padding: 6px 8px;
     font-size: 1.2rem;
