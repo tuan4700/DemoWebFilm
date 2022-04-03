@@ -267,6 +267,7 @@ html {
     border: 1px solid #c4c4c4;
     box-shadow: 0 5px 7px -5px #cccccc inset;
     padding-left: 16px;
+    padding-right: 8px;
     font-size: 1.2rem;
     letter-spacing: 0.4px;
     font-weight: 400;

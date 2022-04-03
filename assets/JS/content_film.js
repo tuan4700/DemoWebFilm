@@ -208,7 +208,10 @@ const app = {
     },
 
     handleEventFilm: function () {
+
+        // Xử lý more-time offer-film và state offer-film
         recommend();
+
     },
 
     start: function () {

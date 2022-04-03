@@ -20,6 +20,9 @@
 </head>
 <body>
     <div class="app">
+        <!-- On/Off Light -->
+        <div class="handle-light"></div>
+
         <!-- Heading -->
         <div class="heading">
             <div class="grid wide">
@@ -42,22 +45,10 @@
                                     <input type="text" placeholder="Tìm kiếm phim..."
                                         class="heading__history__search">
                                     <ul class="heading__search-list">
-                                        <li class="heading__search-item">
+                                        <!-- <li class="heading__search-item">
                                             <i class="heading__search-item__history ti-search"></i>
                                             Đấu phá thương khung
-                                        </li>
-                                        <li class="heading__search-item">
-                                            <i class="heading__search-item__history ti-search"></i>
-                                            Đấu la đại lục
-                                        </li>
-                                        <li class="heading__search-item">
-                                            <i class="heading__search-item__history ti-search"></i>
-                                            Tinh thần biến
-                                        </li>
-                                        <li class="heading__search-item">
-                                            <i class="heading__search-item__history ti-search"></i>
-                                            Linh kiếm tôn
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -69,7 +60,8 @@
                                         <ul class="heading__notifi__list">
                                             <li class="heading__notifi__item">
                                                 <div class="heading__notifi__img">
-                                                    <img src="./assets/image/film/dau-la-dai-luc.jpg"alt="Đấu La Đại Lục" class="heading__notifi__img-film">
+                                                    <img src="../image/film/dau-la-dai-luc.jpg"alt="Đấu La Đại Lục"
+                                                        class="heading__notifi__img-film">
                                                 </div>
                                                 <div class="heading__notifi__content">
                                                     <p class="heading__notifi__name-vi">Đấu La Đại Lục</p>
@@ -82,7 +74,7 @@
                                             </li>
                                             <li class="heading__notifi__item">
                                                 <div class="heading__notifi__img">
-                                                    <img src="./assets/image/film/naruto-the-he-tiep-theo.jpg"
+                                                    <img src="../image/film/naruto-the-he-tiep-theo.jpg"
                                                         alt="Boruto: Naruto Thế Hệ Tiếp Theo"
                                                         class="heading__notifi__img-film">
                                                 </div>
@@ -99,7 +91,7 @@
                                             </li>
                                             <li class="heading__notifi__item">
                                                 <div class="heading__notifi__img">
-                                                    <img src="./assets/image/film/Tan-Thien-Long-Bat-Bo-2021.jpg"
+                                                    <img src="../image/film/Tan-Thien-Long-Bat-Bo-2021.jpg"
                                                         alt="Tân Thiên Long Bát Bộ 2021"
                                                         class="heading__notifi__img-film">
                                                 </div>
@@ -115,7 +107,7 @@
                                             </li>
                                             <li class="heading__notifi__item">
                                                 <div class="heading__notifi__img">
-                                                    <img src="./assets/image/film/fairy-tail.png" alt="Fairy Tail"
+                                                    <img src="../image/film/fairy-tail.png" alt="Fairy Tail"
                                                         class="heading__notifi__img-film">
                                                 </div>
                                                 <div class="heading__notifi__content">
@@ -380,7 +372,7 @@
         <div class="content-film">
             <div class="grid wide">
                 <div class="row l-gutter">
-                    <div class="col l-8-5 m-12 c-12 watch-film__block">
+                    <div class="col l-8-5 m-12 c-12 watch-film__block"> <!-- add zoom -->
                         <!-- Heading Category -->
                         <div class="s-gutters filter-film__path-category">
                             <div class="filter-film__category-heading">
@@ -393,14 +385,15 @@
                                 </div>
                             </div>
                             <div class="content__product__foot content__film__foot"></div>
-                            <div class="watch-film__handle-video"> <!-- add resize - extend-film // width:100%, height:404px -->
+                            <div class="watch-film__handle-video">
+                                <!-- On/Off Light: add class "light" -->
                                 <iframe class="watch-film__handle-video__film" width="100%" height="404" src="" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                                 <div class="watch_film__btn-video">
                                     <div class="watch-film__btn-video__handle">2053 Like</div>
                                     <div class="watch-film__btn-video__handle">Tắt quảng cáo</div>
                                     <div class="watch-film__btn-video__handle">AutoNext: On</div>
                                     <div class="watch-film__btn-video__handle watch-film__zoom">Phóng to</div>
-                                    <div class="watch-film__btn-video__handle">Tắt đèn</div>
+                                    <div class="watch-film__btn-video__handle watch-film__light">Tắt đèn</div>
                                 </div>
                             </div>
                         </div>
@@ -428,18 +421,6 @@
                                             <ul class="watch-film__episode__list">
                                                 <!-- <li class="watch-film__episode__item">1</li>
                                                 <li class="watch-film__episode__item watch-film__episode__click">2</li>
-                                                <li class="watch-film__episode__item">3</li>
-                                                <li class="watch-film__episode__item">4</li>
-                                                <li class="watch-film__episode__item">5</li>
-                                                <li class="watch-film__episode__item">6</li>
-                                                <li class="watch-film__episode__item">7</li>
-                                                <li class="watch-film__episode__item">8</li>
-                                                <li class="watch-film__episode__item">9</li>
-                                                <li class="watch-film__episode__item">10</li>
-                                                <li class="watch-film__episode__item">11</li>
-                                                <li class="watch-film__episode__item">12</li>
-                                                <li class="watch-film__episode__item">13</li>
-                                                <li class="watch-film__episode__item">14</li>
                                                 <li class="watch-film__episode__item">15</li> -->
                                             </ul>
                                         </div>
@@ -448,7 +429,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col l-3-5 m-0 c-0 watch-film__more-film">
+                    <div class="col l-3-5 m-0 c-0 watch-film__more-film"> <!-- add zoom -->
                         <!-- Movie More -->
                         <div class="content__movie-more">
                             <div class="content__movie-more__heading">PHIM XEM NHIỀU</div>
@@ -949,9 +930,11 @@
                 <button type="submit" class="btn notification-log-out__btn__cancel">Cancel</button>
             </div>
         </div>
+
     </div>
 
     <!-- JS -->
     <script type="module" src="/assets/JS/watch_film.js"></script>
+    <script type="module" src="../JS/search_film.js"></script>
 </body>
 </html>

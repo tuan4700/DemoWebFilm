@@ -6,14 +6,16 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 const filmId = window.location.href.slice(52).split('-');
-const zoomVideoBlock = $('.watch-film__block');
-const zoomVideoMoreFilm = $('.watch-film__more-film');
 const btnZoomVideo = $('.watch-film__zoom');
 
 const app = {
     isZoom: false,
+    isLight: true,
 
     handleEventFilm: function () {
+        var btnLigth = $('.watch-film__light');
+
+        // Xử lý more-time offer-film và state offer-film
         recommend();
 
         btnZoomVideo.onclick = () => {
@@ -28,6 +30,22 @@ const app = {
             }
             this.isZoom = !this.isZoom;
         };
+
+        btnLigth.onclick = () => {
+            var backgroundLigth = $('.handle-light');
+            if(this.isLight) {
+                backgroundLigth.style.display = 'block';
+                $('.watch-film__handle-video__film').classList.add('light');
+                $('.watch_film__btn-video').classList.add('light');
+                btnLigth.textContent = "Bật đèn";
+            } else {
+                backgroundLigth.style.display = 'none';
+                $('.watch-film__handle-video__film.light').classList.remove('light');
+                $('.watch_film__btn-video.light').classList.remove('light');
+                btnLigth.textContent = "Tắt đèn";
+            }
+            this.isLight = !this.isLight;
+        }
 
     },
 

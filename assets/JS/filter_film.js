@@ -5,6 +5,9 @@ import { dataListFilms } from "../JS/data.js";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
+const filmId = window.location.href.slice(53).replace(/%20/g, " ").toLowerCase();
+console.log(filmId);
+
 const app = {
 
     renderListFilms: function (listFilms) {

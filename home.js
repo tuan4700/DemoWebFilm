@@ -5,7 +5,6 @@ import { dataListFilms, dataListOfferFlims } from "./assets/JS/data.js";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-const sortFilm = $$('.content__title-item');
 const nextOfferFilms = $('.content__viewport-right');
 const prevOfferFilms = $('.content__viewport-left');
 
@@ -84,6 +83,7 @@ const app = {
 
         // Xử lý more-time offer-film và state offer-film
         recommend();
+
     },
 
     // Thay đổi banner-films
@@ -121,22 +121,12 @@ const app = {
         }
     },
 
-    searchFilms: function (listFilms) {
-        const search = $('.heading__search');
-        const btnSearch = $('.heading__search-icon');
-        search.oninput = function(e) {
-            console.log(e.target.value);
-        }
-    },
-
     start: function () {
         var _this = this;
         // Lấy data từ Api
         dataListFilms(films => {
             // Hiển thị danh sách film
             _this.renderFilms(films);
-            // Tìm kiếm films
-            _this.searchFilms(films);
         });
 
         dataListOfferFlims(offerFilms => {
