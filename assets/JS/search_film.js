@@ -24,9 +24,8 @@ const app = {
                             } else {
                                 return names.concat(film.nameVi);
                             }
-                        } else {
-                            return names;
                         }
+                        return names;
                     }, []))
 
                     // Render listFilm đã lấy
@@ -51,6 +50,26 @@ const app = {
         iconSearch.onclick = function() {
             window.location.href = 'http://127.0.0.1:5500/assets/html/filter_film.html?q=' + handleAccentedString(inputSearch.value);
         };
+
+        inputSearch.oninput = e => {
+            if(e.target.value === "") {
+                dataListFilms(films => {
+                    $('.heading__search-list').innerHTML = films.map((film, index) => {
+                        if(index < 20) {
+                            return `
+                            <li class="heading__search-item">
+                                <i class="heading__search-item__history ti-search"></i>
+                                ${film.nameVi}
+                            </li>
+                            `;
+                        }
+                        return;
+                    }).join('')
+                })
+            }
+            return;
+        }
+        
     },
 
     start: function() {
