@@ -1,3 +1,3 @@
 # DemoWebFilm
-- Chạy json-server: npm start
-- Chạy Web
+- Run json-server: npm start
+- Run index.html
