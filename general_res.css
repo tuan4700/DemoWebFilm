@@ -139,3 +139,9 @@
         height: 66%;
     }
 }
+
+@media (min-width: 1024px) and (max-width: 1112px) {
+    .hidden {
+        display: none;
+    }
+}

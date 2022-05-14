@@ -1,7 +1,7 @@
 noteCode/
-assets/css/account_film.css
-assets/css/sign-in_film.css
-assets/css/sign-up_film.css
-assets/html/account_film.html
-assets/JS/account_film.js
-assets/JS/validator.js
+account_film.css
+sign-in_film.css
+sign-up_film.css
+account_film.html
+account_film.js
+validator.js
