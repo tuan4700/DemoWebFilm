@@ -328,7 +328,6 @@ html {
     padding-top: 8px;
     padding-bottom: 6px;
     font-weight: 400;
-    cursor: pointer;
 }
 
 .heading__search-item:last-child {
@@ -336,9 +335,9 @@ html {
     border-bottom-right-radius: var(--bottom-left-right-radius);
 }
 
-.heading__search-item:hover {
+/* .heading__search-item:hover {
     background-color: rgba(0, 0, 0, 0.05);
-}
+} */
 
 .heading__search-item__history {
     font-size: 1.4rem;

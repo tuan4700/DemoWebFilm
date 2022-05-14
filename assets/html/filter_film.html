@@ -44,10 +44,6 @@
                                     <input type="text" placeholder="Tìm kiếm phim..."
                                         class="heading__history__search">
                                     <ul class="heading__search-list">
-                                        <!-- <li class="heading__search-item">
-                                            <i class="heading__search-item__history ti-search"></i>
-                                            Đấu phá thương khung
-                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -122,13 +118,9 @@
                                         <a href="#" class="heading__notifi__view-all">Xem tất cả</a>
                                     </div>
                                 </div>
-                                <!-- show/hidden khi user đã đăng nhập hoặc chưa đăng nhập thì add class "status--hidden" -->
                                 <button class="btn__no-boder heading__login">
                                     <a href="http://127.0.0.1:5500/assets/html/account_film.html" class="heading__link-form">Đăng nhập</a>
                                 </button>
-                                <!-- <button class="btn__no-boder heading__register">
-                                    <a href="http://127.0.0.1:5500/assets/html/account_film.html" class="heading__link-form">Đăng Ký</a>
-                                </button> -->
                                 <div class="heading__user status--hidden">
                                     <div class="heading__user__avartar hidden-mobile"></div>
                                     <p class="heading__user__name hidden-mobile">Anh Tuan</p>
@@ -148,7 +140,7 @@
                                 </a>
                             </li>
                             <li class="heading__nav-bar__item">
-                                <a href="http://127.0.0.1:5500/assets/html/filter_film.html" class="heading__nav-bar__link">
+                                <a href="#" class="heading__nav-bar__link">
                                     THỂ LOẠI
                                 </a>
                                 <div class="heading__nav-bar__category">
@@ -255,7 +247,7 @@
                                 </div>
                             </li>
                             <li class="heading__nav-bar__item">
-                                <a href="http://127.0.0.1:5500/assets/html/filter_film.html" class="heading__nav-bar__link">
+                                <a href="#" class="heading__nav-bar__link">
                                     QUỐC GIA
                                 </a>
                                 <div class="heading__nav-bar__category-country">
@@ -342,22 +334,22 @@
                                 </div>
                             </li>
                             <li class="heading__nav-bar__item">
-                                <a href="http://127.0.0.1:5500/assets/html/filter_film.html" class="heading__nav-bar__link">
+                                <a href="#" class="heading__nav-bar__link">
                                     PHIM BỘ
                                 </a>
                             </li>
                             <li class="heading__nav-bar__item">
-                                <a href="http://127.0.0.1:5500/assets/html/filter_film.html" class="heading__nav-bar__link">
+                                <a href="#" class="heading__nav-bar__link">
                                     PHIM LẺ
                                 </a>
                             </li>
                             <li class="heading__nav-bar__item">
-                                <a href="http://127.0.0.1:5500/assets/html/filter_film.html" class="heading__nav-bar__link">
+                                <a href="#" class="heading__nav-bar__link">
                                     PHIM VIETSUB
                                 </a>
                             </li>
                             <li class="heading__nav-bar__item">
-                                <a href="http://127.0.0.1:5500/assets/html/filter_film.html" class="heading__nav-bar__link">
+                                <a href="#" class="heading__nav-bar__link">
                                     PHIM THUYẾT MINH
                                 </a>
                             </li>
@@ -375,67 +367,58 @@
                         <!-- Heading Category -->
                         <div class="s-gutters filter-film__path-category">
                             <div class="filter-film__category-heading">
-                                <div class="filter-film__category-heading__content">
-                                    <div class="filter-film__category-heading__name">TVHAY</div>
-                                </div>
-                                <div class="filter-film__category-heading__seperate"></div>
-                                <div class="filter-film__category-heading__content">
-                                    <div class="filter-film__category-heading__name">PHIM BỘ</div>
-                                </div>
                             </div>
                             <div class="content__product__foot content__film__foot"></div>
                         </div>
                         <!-- Tool -->
                         <div class="row no-gutters filter-film__tool">
                             <div class="col l-3 m-3 c-6 filter-film__tool__block-arrange">
-                                <label for="arrange-film" class="filter-film__tool__arrange">Sắp xếp</label>
-                                <select name="arrange-film" id="arrange-status">
-                                    <option value="default">--Mặc định--</option>
-                                    <option value="Newest">Mới nhất</option>
-                                    <option value="oldest">Cũ nhất</option>
-                                    <option value="movie-title">Tiêu đề phim</option>
+                                <label for="status" class="filter-film__tool__arrange">Sắp xếp</label>
+                                <select name="status" id="arrange-status">
+                                    <option value="Default">--Mặc định--</option>
+                                    <option value="Oldest">Cũ nhất</option>
+                                    <option value="MovieTitle">Tiêu đề phim</option>
                                 </select>
                             </div>
                             <div class="col l-3 m-3 c-6">
-                                <select name="arrange-film" id="arrange-country">
-                                    <option value="country">--Quốc gia--</option>
-                                    <option value="India">Phim Ấn độ</option>
-                                    <option value="England">Phim Anh</option>
-                                    <option value="Taiwan">Phim Đài loan</option>
-                                    <option value="Korean">Phim Hàn quốc</option>
-                                    <option value="HongKong">Phim Hồng kong</option>
-                                    <option value="different">Phim Khác</option>
-                                    <option value="US">Phim Mỹ</option>
-                                    <option value="Japan">Phim Nhật bản</option>
-                                    <option value="France">Phim Pháp</option>
-                                    <option value="Thailand">Phim Thái lan</option>
-                                    <option value="China">Phim Trung quốc</option>
-                                    <option value="Vietnam">Phim Việt nam</option>
+                                <select name="country" id="arrange-country">
+                                    <option value="Default">--Quốc gia--</option>
+                                    <option value="Ấn độ">Phim Ấn độ</option>
+                                    <option value="Anh">Phim Anh</option>
+                                    <option value="Đài loan">Phim Đài loan</option>
+                                    <option value="Hàn quốc">Phim Hàn quốc</option>
+                                    <option value="Hồng kong">Phim Hồng kong</option>
+                                    <option value="Mỹ">Phim Mỹ</option>
+                                    <option value="Nhật bản">Phim Nhật bản</option>
+                                    <option value="Pháp">Phim Pháp</option>
+                                    <option value="Thái lan">Phim Thái lan</option>
+                                    <option value="Trung quốc">Phim Trung quốc</option>
+                                    <option value="Việt nam">Phim Việt nam</option>
                                 </select>
                             </div>
                             <div class="col l-3 m-3 c-6">
-                                <select name="arrange-film" id="arrange-kind">
-                                    <option value="kind">--Thể loại--</option>
-                                    <option value="Music">Phim Âm nhạc</option>
-                                    <option value="War">Phim Chiến tranh</option>
-                                    <option value="Comedy">Phim Hài</option>
-                                    <option value="Action">Phim Hành động</option>
-                                    <option value="Criminal">Phim Hình sự</option>
-                                    <option value="Cartoon">Phim Hoạt hình</option>
-                                    <option value="Science">Phim Khoa học</option>
-                                    <option value="Horror">Phim Kinh dị</option>
-                                    <option value="Adventure">Phim Phiêu lưu</option>
-                                    <option value="Psychology">Phim Tâm lý</option>
-                                    <option value="Legend">Phim Thần thoại</option>
-                                    <option value="Romance">Phim Tình cảm</option>
-                                    <option value="TVShow">Phim TV show</option>
-                                    <option value="Fantasy">Phim Viễn tưởng</option>
-                                    <option value="Martial_arts">Phim Võ thuật</option>
+                                <select name="kind" id="arrange-kind">
+                                    <option value="Default">--Thể loại--</option>
+                                    <option value="Phim Âm nhạc">Phim Âm nhạc</option>
+                                    <option value="Phim Chiến tranh">Phim Chiến tranh</option>
+                                    <option value="Phim Hài">Phim Hài</option>
+                                    <option value="Phim Hành động">Phim Hành động</option>
+                                    <option value="Phim Hình sự">Phim Hình sự</option>
+                                    <option value="Phim Hoạt hình">Phim Hoạt hình</option>
+                                    <option value="Phim Khoa học">Phim Khoa học</option>
+                                    <option value="Phim Kinh dị">Phim Kinh dị</option>
+                                    <option value="Phim Phiêu lưu">Phim Phiêu lưu</option>
+                                    <option value="Phim Tâm lý">Phim Tâm lý</option>
+                                    <option value="Phim Thần thoại">Phim Thần thoại</option>
+                                    <option value="Phim Tình cảm">Phim Tình cảm</option>
+                                    <option value="Phim Cổ trang">Phim Cổ trang</option>
+                                    <option value="Phim Viễn tưởng">Phim Viễn tưởng</option>
+                                    <option value="Phim Võ thuật">Phim Võ thuật</option>
                                 </select>
                             </div>
                             <div class="col l-1-5 m-1-5 c-3">
-                                <select name="arrange-film" id="arrange-time">
-                                    <option value="year">--Năm--</option>
+                                <select name="time" id="arrange-time">
+                                    <option value="Default">--Năm--</option>
                                     <option value="2021">2021</option>
                                     <option value="2020">2020</option>
                                     <option value="2019">2019</option>
@@ -445,55 +428,15 @@
                                     <option value="2015">2015</option>
                                 </select>
                             </div>
-                            <div class="col l-1-5 m-1-5 c-3">
-                                <button class="filter-film__tool__browse">Duyệt</button>
-                            </div>
                         </div>
                         <!-- Product -->
                         <div class="grid content__product nowrap-banner-films content__product__wrap">
                             <ul class="row s-gutters content__product__list">
                                 <!-- ẩn số tập add class "status--hidden" -->
-                                <!-- <li class="col l-3 m-3 c-12 content__product__item">
-                                    <div class="content__product__background">
-                                        <div class="content__product__block-img">
-                                            <img src="/assets/image/product/tho-san-thanh-pho.jpg" alt="Thợ Săn Thành Phố"
-                                                class="product__img content__product__img">
-                                            <a href="#" class="content__product__item-overlay product__overlay">
-                                                <i class="product__overlay__icon far fa-play-circle"></i>
-                                            </a>
-                                        </div>
-                                        <div class="status">
-                                            <div class="status__episodes status--hidden">0/0</div>
-                                            <div class="status__language">Thuyết Minh</div>
-                                        </div>
-                                        <div class="content__product-block">
-                                            <div class="content__product__info">
-                                                <div class="content__product__info-vi name-film__vi s-product">Thợ Săn Thành Phố: Căn
-                                                    Cứ Bí Mật Shinjuku</div>
-                                                <div class="content__product__info-eng name-film__eng s-product">City Hunter Movie:
-                                                    Shinjuku Private Eyes</div>
-                                            </div>
-                                            <div class="content__product__plot">
-                                                <b>Thợ Săn Thành Phố: Căn Cứ Bí Mật Shinjuku</b> Thám tử tư Ryo Saeba 
-                                                được thuê để bảo vệ con gái của một nhà khoa học vừa qua đời 
-                                                trong một vụ tai nạn giao thông đáng ngờ.
-                                            </div>
-                                            <div class="product__origin">
-                                                <div class="product__origin__year">2019</div>
-                                                <div class="product__origin__like">
-                                                    <i class="product__origin__like-icon fas fa-heart"></i>
-                                                    <div class="product__origin__like-count">9</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li> -->
                             </ul>
                         </div>
                         <!-- Chọn page add class "content__product__click-page" -->
                         <ul class="content__product__list-pages">
-                            <!-- <li class="content__product__item-pages content__product__click-page">1</li>
-                            <li class="content__product__item-pages">2</li> -->
                         </ul>
                     </div>
 
@@ -520,10 +463,6 @@
                                                 Lục</a>
                                             <div class="content__movie-more__sub-info">
                                                 <span class="content__sub-info__vi name-film__eng">Soul Land</span>
-                                                <!-- <div class="content__sub-info__view">
-                                                    <span class="content__sub-info__view-number">99948</span>
-                                                    <span class="content__sub-info__view-text">lượt</span>
-                                                </div> -->
                                             </div>
                                         </div>
                                     </li>

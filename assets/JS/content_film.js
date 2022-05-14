@@ -1,6 +1,7 @@
 // "use strict";
 import recommend from "./recommend_film.js";
 import { dataListFilms, dataListOfferFlims } from "./data.js";
+import { HandleNavBar } from "../JS/utils.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -212,10 +213,12 @@ const app = {
         // Xử lý more-time offer-film và state offer-film
         recommend();
 
+        // Xử lý NavBar
+        HandleNavBar();
+
     },
 
     start: function () {
-        var _this = this;
         this.handleEventFilm();
         this.renderContentFilm();
     }

@@ -1,7 +1,8 @@
-"use strict";
-import recommend from './assets/JS/recommend_film.js';
+// "use strict";
+import recommend from "./assets/JS/recommend_film.js";
 import { dataListFilms, dataListOfferFlims } from "./assets/JS/data.js";
-
+import { HandleNavBar } from "./assets/JS/utils.js";
+ 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -84,6 +85,8 @@ const app = {
         // Xử lý more-time offer-film và state offer-film
         recommend();
 
+        // Xử lý NavBar
+        HandleNavBar();
     },
 
     // Thay đổi banner-films

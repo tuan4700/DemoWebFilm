@@ -55,10 +55,6 @@
     border-bottom: 2px solid var(--general-color);
 }
 
-.filter-film__tool__block-arrange {
-    
-}
-
 .filter-film__tool__arrange {
     width: 50px;
     font-size: 1.2rem;

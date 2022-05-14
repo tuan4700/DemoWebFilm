@@ -1,6 +1,7 @@
 // "use strict";
 import recommend from "./recommend_film.js";
 import { dataListFilms, dataListOfferFlims } from "./data.js";
+import { HandleNavBar } from "../JS/utils.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -47,6 +48,9 @@ const app = {
             this.isLight = !this.isLight;
         }
 
+        // Xử lý NavBar
+        HandleNavBar();
+
     },
 
     showVideo: function (films, numberEpisode) {
@@ -72,7 +76,8 @@ const app = {
                             episodes.innerHTML = film.listEpisode.map((episode, index) => {
                                 if(index === 0) {
                                     return `
-                                    <li class="watch-film__episode__item watch-film__episode__click" data-id=${index + 1}>${index + 1}</li>
+                                    <li class="watch-film__episode__item watch-film__episode__click"
+                                        data-id=${index + 1}>${index + 1}</li>
                                     `;
                                 }
                                 return `
@@ -91,7 +96,8 @@ const app = {
                             episodes.innerHTML = film.listEpisode.map((episode, index) => {
                                 if(index === 0) {
                                     return `
-                                    <li class="watch-film__episode__item watch-film__episode__click" data-id=${index + 1}>${index + 1}</li>
+                                    <li class="watch-film__episode__item watch-film__episode__click"
+                                        data-id=${index + 1}>${index + 1}</li>
                                     `;
                                 }
                                 return `
