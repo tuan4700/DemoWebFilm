@@ -134,10 +134,6 @@
     .heading__logo__img {
         margin-top: 20px;
     }
-    
-    .heading__nav-bar__auth {
-        height: 66%;
-    }
 }
 
 @media (min-width: 1024px) and (max-width: 1112px) {

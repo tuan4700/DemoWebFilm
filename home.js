@@ -19,7 +19,7 @@ const app = {
             if (i <= 20) {
                 return `
                 <li class="col l-3 m-3 c-12 content__product__item">
-                    <div class="content__product__background">
+                    <div class="content__product__background" data-id=${film.id}>
                         <img src="${film.img}" alt="${film.nameVi}"
                             class="product__img content__product__img">
                         <a href="/assets/html/content_film.html?q=list-${film.id}" class="content__product__item-overlay product__overlay">
@@ -52,6 +52,7 @@ const app = {
             return;
         })
         $('.row.s-gutters.content__product__list').innerHTML = htmlFilms.join('');
+        this.clickFilm("list");
     },
 
     renderOfferFilms: function (listFilms) {
@@ -87,6 +88,15 @@ const app = {
 
         // Xử lý NavBar
         HandleNavBar();
+    },
+
+    clickFilm: function (type) {
+        const test = $$('.content__product__background');
+        test.forEach(item => {
+            item.onclick = () => {
+                window.location.href = `http://127.0.0.1:5500/assets/html/content_film.html?q=${type}-${item.dataset['id']}`;
+            }
+        })
     },
 
     // Thay đổi banner-films
@@ -130,6 +140,7 @@ const app = {
         dataListFilms(films => {
             // Hiển thị danh sách film
             _this.renderFilms(films);
+            // _this.clickFilm();
         });
 
         dataListOfferFlims(offerFilms => {
