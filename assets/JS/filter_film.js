@@ -8,7 +8,8 @@ import { HandleNavBar, CheckKeyParams } from "../JS/utils.js";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-const keySearch = window.location.href.slice(51).replace(/%20/g, " ");
+const keyFilm = window.location.href.slice(51).replace(/%20/g, " ");
+console.log(CheckKeyParams(keyFilm).type);
 
 const elementListFilms = $('.row.s-gutters.content__product__list');
 
@@ -21,7 +22,7 @@ const app = {
         recommend();
 
         // Xử lý header list film
-        keySearchHeading(CheckKeyParams(keySearch).search, CheckKeyParams(keySearch).type, CheckKeyParams(keySearch).key);
+        keySearchHeading(CheckKeyParams(keyFilm).search, CheckKeyParams(keyFilm).type, CheckKeyParams(keyFilm).key);
 
         // Xử lý NavBar
         HandleNavBar();
@@ -30,7 +31,7 @@ const app = {
     renderFilmSearch: function (listFilms) {
         var showFilms = 0;
         var elementListFilms = $('.row.s-gutters.content__product__list');
-        const nameFilmSearch = CheckKeyParams(keySearch).search.toLowerCase();
+        const nameFilmSearch = CheckKeyParams(keyFilm).search.toLowerCase();
 
         elementListFilms.innerHTML = listFilms.map(film => {
             var checkFilmNameVi = handleAccentedString(film.nameVi).toLowerCase().indexOf(nameFilmSearch);
@@ -51,7 +52,7 @@ const app = {
             <div class="content__product__background">
                 <img src="${films.img}" alt="${films.nameVi}"
                     class="product__img content__product__img">
-                <a href="./content_film.html?q=list-${films.id}" class="content__product__item-overlay product__overlay">
+                <a href="./content_film.html?type=${CheckKeyParams(keyFilm).type}&keyID=list-${films.id}" class="content__product__item-overlay product__overlay">
                     <i class="product__overlay__icon far fa-play-circle"></i>
                 </a>
                 <div class="status">
@@ -272,7 +273,7 @@ const app = {
     },
 
     renderFilmsType: function (listFilm) {
-        const filmType = CheckKeyParams(keySearch).type;
+        const filmType = CheckKeyParams(keyFilm).type;
         var showFilms = 0;
         switch (filmType) {
             case "bo":

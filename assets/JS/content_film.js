@@ -1,22 +1,29 @@
 // "use strict";
 import recommend from "./recommend_film.js";
 import { dataListFilms, dataListOfferFlims } from "./data.js";
-import { HandleNavBar } from "../JS/utils.js";
+import keySearchHeading from "./keySearchHeading.js";
+import { HandleNavBar, CheckKeyParams } from "../JS/utils.js";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-const filmId = window.location.href.slice(54).split('-');
+// const filmId = window.location.href.slice(54).split('-');
+const filmId = window.location.href.slice(52);
+const paramsKeys = CheckKeyParams(filmId);
+const keyFilm = paramsKeys.key.split('-');
+console.log(filmId, paramsKeys.type);
+console.log(paramsKeys);
+
 
 const app = {
 
     renderContentFilm: function () {
         var contentFilm = $('.content-film__info');
-        if (filmId[0] === 'offer' || filmId[0] === 'list') {
-            if (filmId[0] === 'list') {
+        if (keyFilm[0] === 'offer' || keyFilm[0] === 'list') {
+            if (keyFilm[0] === 'list') {
                 dataListFilms(films => {
                     contentFilm.innerHTML = films.map(film => {
-                        if (film.id === Number(filmId[1])) {
+                        if (film.id === Number(keyFilm[1])) {
                             return `
                             <div class="content-film__info">
                                 <div class="row no-gutters content-film__info-block">
@@ -60,7 +67,7 @@ const app = {
                                             </div>
                                         </div>
                                         <div class="content-film__info__watch-like-rating">
-                                            <a href="/assets/html/watch_film.html?q=list-${film.id}" class="content-film__info__watch">
+                                            <a href="/assets/html/watch_film.html?type=${paramsKeys.type}&keyID=list-${film.id}" class="content-film__info__watch">
                                                 XEM PHIM
                                                 <div class="content-film__info__block-play">
                                                     <i class="content-film__info__watch-play fas fa-play"></i>
@@ -107,11 +114,17 @@ const app = {
                         }
                         return;
                     }).join('');
+
+                    const getFilm = films.find((film, index) => {
+                        return Number(keyFilm[1]) === index + 1;
+                    })
+                    console.log(getFilm.nameVi);
+                    keySearchHeading("", paramsKeys.type, getFilm.nameVi);
                 })
             } else {
                 dataListOfferFlims(films => {
                     contentFilm.innerHTML = films.map(film => {
-                        if (film.id === Number(filmId[1])) {
+                        if (film.id === Number(keyFilm[1])) {
                             return `
                             <div class="content-film__info">
                                 <div class="row no-gutters content-film__info-block">
@@ -155,7 +168,7 @@ const app = {
                                             </div>
                                         </div>
                                         <div class="content-film__info__watch-like-rating">
-                                            <a href="/assets/html/watch_film.html?q=offer-${film.id}" class="content-film__info__watch">
+                                            <a href="/assets/html/watch_film.html?type=${paramsKeys.type}&keyID=offer-${film.id}" class="content-film__info__watch">
                                                 XEM PHIM
                                                 <div class="content-film__info__block-play">
                                                     <i class="content-film__info__watch-play fas fa-play"></i>
@@ -202,6 +215,12 @@ const app = {
                         }
                         return;
                     }).join('');
+
+                    const getFilm = films.find((film, index) => {
+                        return Number(keyFilm[1]) === index + 1;
+                    })
+                    console.log(getFilm.nameVi);
+                    keySearchHeading("", paramsKeys.type, getFilm.nameVi);
                 })
             }
         }

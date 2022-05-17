@@ -22,7 +22,7 @@ const app = {
                     <div class="content__product__background" data-id=${film.id}>
                         <img src="${film.img}" alt="${film.nameVi}"
                             class="product__img content__product__img">
-                        <a href="/assets/html/content_film.html?q=list-${film.id}" class="content__product__item-overlay product__overlay">
+                        <a href="/assets/html/content_film.html?keyID=list-${film.id}" class="content__product__item-overlay product__overlay">
                             <i class="product__overlay__icon far fa-play-circle"></i>
                         </a>
                         <div class="status">
@@ -63,7 +63,7 @@ const app = {
                 <div class="content__viewport__banner">
                     <img src="${film.img}"
                         alt="${film.nameVi}" class="product__img content__viewport__img">
-                    <a href="/assets/html/content_film.html?q=offer-${film.id}" class="content__viewport__overlay product__overlay">
+                    <a href="/assets/html/content_film.html?keyID=offer-${film.id}" class="content__viewport__overlay product__overlay">
                         <i class="product__overlay__icon far fa-play-circle"></i>
                     </a>
                 </div>
