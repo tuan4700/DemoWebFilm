@@ -649,6 +649,7 @@ html {
     width: auto;
     position: relative;
     cursor: pointer;
+    height: 100%;
 }
 
 .heading__nav-bar__item:nth-child(2):hover .heading__nav-bar__category {
@@ -668,8 +669,9 @@ html {
     height: 100%;
     text-decoration: none;
     color: var(--text-color);
-    padding: 4px 16px 0 16px;
+    padding: 0 16px;
     position: relative;
+    line-height: 36px;
 }
 
 .heading__nav-bar__link:hover {
@@ -1017,7 +1019,7 @@ html {
     font-weight: 500;
     color: var(--white-color);
     text-decoration: none;
-    padding-left: 12px;
+    padding-left: 8px;
     display: block;
 }
 
@@ -1025,7 +1027,7 @@ html {
     font-size: 1rem;
     color: var(--white-color);
     position: absolute;
-    top: 10px;
+    top: 11px;
     right: 4px;
 }
 /* Product */
@@ -1196,8 +1198,7 @@ html {
 .footer__content {
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 2px;
     display: flex;
 }
 
