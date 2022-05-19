@@ -1,7 +1,7 @@
 # DemoWebFilm
 ## Run App
 - Run json-server: npm start
-- Run index.html
+- Run index.html (Ex: Live Server)
 
 ### Home
 ![home](https://user-images.githubusercontent.com/45823921/169244890-9065184e-392b-4755-9490-c57f324f8fd8.png)
