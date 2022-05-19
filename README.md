@@ -3,8 +3,8 @@
 - Run index.html
 
 ### Home
-![home](https:![notification](https://user-images.githubusercontent.com/45823921/169244531-d5912968-5416-4273-96a7-f34780d80476.png)
-![notification](https://user-images.githubusercontent.com/45823921/169244627-34b0ed9e-4253-4dea-8d4b-06c4fadffd4d.png)
+![home](https://user-images.githubusercontent.com/45823921/169244890-9065184e-392b-4755-9490-c57f324f8fd8.png)
+![notification](https://user-images.githubusercontent.com/45823921/169244912-0a6c6809-4e28-4009-987c-0631f4a3a107.png)
 
 ### Filter Film
 ![filter](https://user-images.githubusercontent.com/45823921/168840197-dd27fe23-89c2-4571-bf71-a9815d52cf2a.png)
