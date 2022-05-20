@@ -1,6 +1,6 @@
 # DemoWebFilm
 ## Run App
-- Run json-server: npm start
+- Run json-server: cd json-server && npm start
 - Run index.html (Ex: Live Server)
 
 ### Home
