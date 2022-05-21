@@ -82,19 +82,39 @@ const app = {
     },
 
     handleEvent: function () {
+        const navBarMobile = $$('.content__menu-item');
 
         // Xử lý more-time offer-film và state offer-film
         recommend();
 
         // Xử lý NavBar
         HandleNavBar();
+
+        // Xử lý NavBar Mobile
+        navBarMobile.forEach(item => {
+            item.onclick = (e) => {
+                switch (e.target.textContent) {
+                    case "PHIM BỘ":
+                        window.location.href = `http://127.0.0.1:5500/assets/html/filter_film.html?type=bo`;
+                        break;
+                    case "PHIM LẺ":
+                        window.location.href = `http://127.0.0.1:5500/assets/html/filter_film.html?type=le`;
+                        break;
+                    case "PHIM THUYẾT MINH":
+                        window.location.href = `http://127.0.0.1:5500/assets/html/filter_film.html?type=thuyetminh`;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        })
     },
 
     clickFilm: function (type) {
-        const test = $$('.content__product__background');
-        test.forEach(item => {
+        const films = $$('.content__product__background');
+        films.forEach(item => {
             item.onclick = () => {
-                window.location.href = `http://127.0.0.1:5500/assets/html/content_film.html?q=${type}-${item.dataset['id']}`;
+                window.location.href = `http://127.0.0.1:5500/assets/html/content_film.html?keyID=${type}-${item.dataset['id']}`;
             }
         })
     },

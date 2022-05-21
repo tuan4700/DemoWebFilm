@@ -9,7 +9,6 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 const keyFilm = window.location.href.slice(51).replace(/%20/g, " ");
-console.log(CheckKeyParams(keyFilm).type);
 
 const elementListFilms = $('.row.s-gutters.content__product__list');
 
@@ -49,7 +48,7 @@ const app = {
     renderFilm: function (films) {
         return `
         <li class="col l-3 m-3 c-12 content__product__item">
-            <div class="content__product__background">
+            <div class="content__product__background" data-id=${films.id}>
                 <img src="${films.img}" alt="${films.nameVi}"
                     class="product__img content__product__img">
                 <a href="./content_film.html?type=${CheckKeyParams(keyFilm).type}&keyID=list-${films.id}" class="content__product__item-overlay product__overlay">
@@ -143,6 +142,17 @@ const app = {
                 }
             }
         });
+    },
+
+    clickFilm: function (type) {
+        const films = $$('.content__product__background');
+        const typeFilm = CheckKeyParams(keyFilm).type;
+
+        films.forEach(item => {
+            item.onclick = () => {
+                window.location.href = `http://127.0.0.1:5500/assets/html/content_film.html?type=${typeFilm}&keyID=${type}-${item.dataset['id']}`;
+            }
+        })
     },
 
     sortFilm: function (listFilm) {
@@ -336,6 +346,7 @@ const app = {
             _this.renderFilmSearch(films);
             _this.renderFilmsType(films);
             _this.sortFilm(films);
+            _this.clickFilm("list");
         })
         
         this.handleEventFilms();

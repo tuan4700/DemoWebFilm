@@ -11,9 +11,6 @@ const $$ = document.querySelectorAll.bind(document);
 const filmId = window.location.href.slice(52);
 const paramsKeys = CheckKeyParams(filmId);
 const keyFilm = paramsKeys.key.split('-');
-console.log(filmId, paramsKeys.type);
-console.log(paramsKeys);
-
 
 const app = {
 
@@ -118,7 +115,6 @@ const app = {
                     const getFilm = films.find((film, index) => {
                         return Number(keyFilm[1]) === index + 1;
                     })
-                    console.log(getFilm.nameVi);
                     keySearchHeading("", paramsKeys.type, getFilm.nameVi);
                 })
             } else {
